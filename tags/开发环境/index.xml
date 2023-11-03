@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发环境 on 老胡的星辰随笔</title>
+    <link>https://hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+    <description>Recent content in 开发环境 on 老胡的星辰随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Nov 2023 10:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gcc windows环境安装(目前13.2版本)</title>
+      <link>https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Thu, 02 Nov 2023 10:19:04 +0800</pubDate>
+      
+      <guid>https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</guid>
+      <description>文章目录 1 2 3 4 5 6 7 8 9 10 11 一、简介 1. MinGW 和 MinGW-W64 区别和联系 二、下载 1. 从 sourceforge.net 下载 2. 从 github 下载 3. 从 镜像站点 下载 三、安装与配置 1. 在线安装 2. 离线安装 3. 环境配置 四、总结 一、简介 MinGW 和 MinGW-W64 区别和联系 MinGW和MinGW-W64都是用于Windows平台的轻量级GNU工具链，用于开发和编译C和C++程序。 MinGW（Minimalist GNU for Windows）是一个32位的GNU工具链，它提供了一套基于GNU的开发环境，包括GCC编译器和一些GNU库，可以用来编译Windows下的C和C++程序。但MinGW只支持32位程序的编译。
+MinGW-W64是一个64位的GNU工具链，是MinGW的升级版，原本它是MinGW的分支，后来成为独立发展的项目，它支持同时编译32位和64位程序。它包括了一系列的GNU库和工具，例如GCC、Binutils、GDB等，还支持一些实用工具和库，如OpenMP、MPI等。</description>
+    </item>
+    
+  </channel>
+</rss>
