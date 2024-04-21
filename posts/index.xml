@@ -6,7 +6,40 @@
     <description>Recent content in Posts on 老胡的星辰随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Nov 2023 10:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Apr 2024 16:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centos7.x配置Go开发环境</title>
+      <link>https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sun, 21 Apr 2024 16:19:04 +0800</pubDate>
+      
+      <guid>https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+      <description>Centos7.x配置Go开发环境 安装golang 准备环境
+$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
+$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz https://studygolang.com/dl下载最新的源码包编译
+设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
+bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
+$ mkdir $HOME/gowork 然后在配置文件中添加环境变量
+$ vim /etc/profile 加入以下内容：
+# Golangexport GO111MODULE=onexport GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOCACHE=/tmp/gocacheexport GONOSUMDB=&amp;#34;github.</description>
+    </item>
+    
+    <item>
+      <title>ubuntu 22.04 安装go</title>
+      <link>https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sun, 21 Apr 2024 16:19:04 +0800</pubDate>
+      
+      <guid>https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+      <description>ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;amp;&amp;amp; apt-get upgrade -y 环境安装 mkdir ~/go
+cd ~/go
+wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
+tar -C /usr/local go1.22.2.linux-amd64.tar.gz
+设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
+bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
+$ mkdir $HOME/gowork 在配置文件中添加环境变量
+$ vim /etc/profile 加入以下内容：
+export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&amp;#34;github.com&amp;#34;export GONOPROXY=&amp;#34;github.com&amp;#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&amp;#34;github.</description>
+    </item>
+    
     <item>
       <title>gcc windows环境安装(目前13.2版本)</title>
       <link>https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</link>

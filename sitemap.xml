@@ -2,20 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hujian.xyz/tags/linux/</loc>
+    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hujian.xyz/posts/</loc>
+    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hujian.xyz/tags/</loc>
+    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hujian.xyz/</loc>
+    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hujian.xyz/posts/</loc>
-    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hujian.xyz/tags/</loc>
-    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hujian.xyz/</loc>
-    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hujian.xyz/tags/nginx/</loc>
     <lastmod>2023-07-25T00:00:00+00:00</lastmod>
@@ -40,9 +49,6 @@
   </url><url>
     <loc>https://hujian.xyz/posts/kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-07-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hujian.xyz/tags/linux/</loc>
-    <lastmod>2023-04-28T16:19:04+08:00</lastmod>
   </url><url>
     <loc>https://hujian.xyz/posts/ubuntu22.04%E5%AE%89%E8%A3%85gitlab/</loc>
     <lastmod>2023-04-28T16:19:04+08:00</lastmod>
