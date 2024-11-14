@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>website on 老胡的星辰随笔</title>
+    <title>website on 深海映星辰</title>
     <link>https://hujian.xyz/tags/website/</link>
-    <description>Recent content in website on 老胡的星辰随笔</description>
+    <description>Recent content in website on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Mar 2023 16:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Aug 2024 16:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米路由器开发板</title>
+      <link>https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/</link>
+      <pubDate>Wed, 21 Aug 2024 16:19:04 +0800</pubDate>
+      
+      <guid>https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/</guid>
+      <description>小米路由器开发板环境制作 准备条件 a.小米路由器型号要符合支持开发板，参考下图； b.下载开发板固件（与路由器型号匹配）：选择下载&amp;gt;ROM&amp;gt;小米路由器3 下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）
+http://miwifi.com/miwifi_download.html 升级固件 步骤一 路由器初始管理平台地址：http://192.168.31.1。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。
+步骤二 a.绑定路由器到自己的小米账号
+打开小米路由器的web界面，使用微信扫描登录页面的二维码安装miwifi 登录后页面提示小米路由器3(R3) MiWiFi 开发版 2.27.120，表示安装成功。 安装ssh并登录到终端 必须升级固件后才开始操作安装SSH，满足条件：安装固件：1. 开发版 2.27.120；2. 用户已经绑定路由器到自己的小米账号
+获取ssh密码 访问：https://d.miwifi.com/rom/ssh 并登录以上的网页。网页上展示了root的密码和开启SSH的工具包，下载工具包，将下载好的文件移植到U盘，保证U盘里面的文件名为miwifi_ssh.bin。 注意事项： 使用chrome下载工具包可能会被拦截，请使用其他浏览器下载。 安装步骤：
+1. 请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；2. 断开小米路由器的电源，将U盘插入USB接口；3. 按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；4. 等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）使用SSH进入终端 连接小米路由器WIFI ，在终端输入：ssh root@192.168.31.1；SSH密码在页面查看（https://d.miwifi.com/） 下载潘多拉固件 访问：https://opt.cn2qq.com/padavan/ 搜索 MI 打开小米路由器3的固件并下载。 将下载的MI-3_3.4.3.9-099.trx 放入U盘根目录，名字不要随意更改，保证为：MI-3_3.4.3.9-099.trx；插入U盘到路由器，然后重启；
+刷入潘多拉固件 上传下载的固件到路由器的/tmp目录下：</description>
+    </item>
+    
     <item>
       <title>使用aws-cloudfront做CDN转发</title>
       <link>https://hujian.xyz/posts/%E4%BD%BF%E7%94%A8aws-cloudfront%E5%81%9Acdn%E8%BD%AC%E5%8F%91/</link>

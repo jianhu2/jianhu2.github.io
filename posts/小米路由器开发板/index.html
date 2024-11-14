@@ -3,18 +3,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>深海映星辰 | Tags</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="https://hujian.xyz/tags/" />
+    <title>深海映星辰 | 小米路由器开发板</title>
+    <meta name="description" content="小米路由器开发板环境制作 准备条件 a.小米路由器型号要符合支持开发板，参考下图； b.下载开发板固件（与路由器型号匹配）：选择下载&gt;ROM&gt;小米路由器3 下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）
+http://miwifi.com/miwifi_download.html 升级固件 步骤一 路由器初始管理平台地址：http://192.168.31.1。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。
+步骤二 a.绑定路由器到自己的小米账号
+打开小米路由器的web界面，使用微信扫描登录页面的二维码安装miwifi 登录后页面提示小米路由器3(R3) MiWiFi 开发版 2.27.120，表示安装成功。 安装ssh并登录到终端 必须升级固件后才开始操作安装SSH，满足条件：安装固件：1. 开发版 2.27.120；2. 用户已经绑定路由器到自己的小米账号
+获取ssh密码 访问：https://d.miwifi.com/rom/ssh 并登录以上的网页。网页上展示了root的密码和开启SSH的工具包，下载工具包，将下载好的文件移植到U盘，保证U盘里面的文件名为miwifi_ssh.bin。 注意事项： 使用chrome下载工具包可能会被拦截，请使用其他浏览器下载。 安装步骤：
+1. 请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；2. 断开小米路由器的电源，将U盘插入USB接口；3. 按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；4. 等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）使用SSH进入终端 连接小米路由器WIFI ，在终端输入：ssh root@192.168.31.1；SSH密码在页面查看（https://d.miwifi.com/） 下载潘多拉固件 访问：https://opt.cn2qq.com/padavan/ 搜索 MI 打开小米路由器3的固件并下载。 将下载的MI-3_3.4.3.9-099.trx 放入U盘根目录，名字不要随意更改，保证为：MI-3_3.4.3.9-099.trx；插入U盘到路由器，然后重启；
+刷入潘多拉固件 上传下载的固件到路由器的/tmp目录下： ">
+    <link rel="canonical" href="https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hujian.xyz/tags/" />
+    <meta property="og:title" content="小米路由器开发板" />
+<meta property="og:description" content="小米路由器开发板环境制作 准备条件 a.小米路由器型号要符合支持开发板，参考下图； b.下载开发板固件（与路由器型号匹配）：选择下载&gt;ROM&gt;小米路由器3 下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）
+http://miwifi.com/miwifi_download.html 升级固件 步骤一 路由器初始管理平台地址：http://192.168.31.1。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。
+步骤二 a.绑定路由器到自己的小米账号
+打开小米路由器的web界面，使用微信扫描登录页面的二维码安装miwifi 登录后页面提示小米路由器3(R3) MiWiFi 开发版 2.27.120，表示安装成功。 安装ssh并登录到终端 必须升级固件后才开始操作安装SSH，满足条件：安装固件：1. 开发版 2.27.120；2. 用户已经绑定路由器到自己的小米账号
+获取ssh密码 访问：https://d.miwifi.com/rom/ssh 并登录以上的网页。网页上展示了root的密码和开启SSH的工具包，下载工具包，将下载好的文件移植到U盘，保证U盘里面的文件名为miwifi_ssh.bin。 注意事项： 使用chrome下载工具包可能会被拦截，请使用其他浏览器下载。 安装步骤：
+1. 请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；2. 断开小米路由器的电源，将U盘插入USB接口；3. 按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；4. 等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）使用SSH进入终端 连接小米路由器WIFI ，在终端输入：ssh root@192.168.31.1；SSH密码在页面查看（https://d.miwifi.com/） 下载潘多拉固件 访问：https://opt.cn2qq.com/padavan/ 搜索 MI 打开小米路由器3的固件并下载。 将下载的MI-3_3.4.3.9-099.trx 放入U盘根目录，名字不要随意更改，保证为：MI-3_3.4.3.9-099.trx；插入U盘到路由器，然后重启；
+刷入潘多拉固件 上传下载的固件到路由器的/tmp目录下：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-08-21T16:19:04+08:00" />
+<meta property="article:modified_time" content="2024-08-21T16:19:04+08:00" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="小米路由器开发板"/>
+<meta name="twitter:description" content="小米路由器开发板环境制作 准备条件 a.小米路由器型号要符合支持开发板，参考下图； b.下载开发板固件（与路由器型号匹配）：选择下载&gt;ROM&gt;小米路由器3 下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）
+http://miwifi.com/miwifi_download.html 升级固件 步骤一 路由器初始管理平台地址：http://192.168.31.1。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。
+步骤二 a.绑定路由器到自己的小米账号
+打开小米路由器的web界面，使用微信扫描登录页面的二维码安装miwifi 登录后页面提示小米路由器3(R3) MiWiFi 开发版 2.27.120，表示安装成功。 安装ssh并登录到终端 必须升级固件后才开始操作安装SSH，满足条件：安装固件：1. 开发版 2.27.120；2. 用户已经绑定路由器到自己的小米账号
+获取ssh密码 访问：https://d.miwifi.com/rom/ssh 并登录以上的网页。网页上展示了root的密码和开启SSH的工具包，下载工具包，将下载好的文件移植到U盘，保证U盘里面的文件名为miwifi_ssh.bin。 注意事项： 使用chrome下载工具包可能会被拦截，请使用其他浏览器下载。 安装步骤：
+1. 请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；2. 断开小米路由器的电源，将U盘插入USB接口；3. 按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；4. 等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）使用SSH进入终端 连接小米路由器WIFI ，在终端输入：ssh root@192.168.31.1；SSH密码在页面查看（https://d.miwifi.com/） 下载潘多拉固件 访问：https://opt.cn2qq.com/padavan/ 搜索 MI 打开小米路由器3的固件并下载。 将下载的MI-3_3.4.3.9-099.trx 放入U盘根目录，名字不要随意更改，保证为：MI-3_3.4.3.9-099.trx；插入U盘到路由器，然后重启；
+刷入潘多拉固件 上传下载的固件到路由器的/tmp目录下："/>
 
     
         
@@ -152,18 +172,10 @@
 
 
         <div id="content">
-    
 
 
 
 
-
-
-    
-        
-        
-        
-    
 
 
 
@@ -171,12 +183,25 @@
     <div class="hero">
         
             <div class="hero-img">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/tag.jpg" alt="">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
             </div>
         
         <div class="hero-content">
-            <div class="hero-title">标签</div>
-            <div></div>
+            <div class="hero-title">小米路由器开发板</div>
+            <div class="hero-subtitle"></div>
+            <div class="hero-date">
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2024-8-21 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2024-8-21 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-folder"></i>
+                        未收录
+                        
+                    </span>    
+            </div>
+            <div class="timelong">
+                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 141 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> 阅读时间: 1 分钟 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-eye"></i> 阅读量: <span id="busuanzi_value_page_pv"></span></span>
+            </div>
         </div>
     </div>
 
@@ -195,7 +220,7 @@
     
 
 
-<div class="taxo-body">
+<div class="content-root">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -208,118 +233,165 @@
         </button>
     </div>
     
-        <div class='taxo-row taxo-row-tag'>
+        <div class="content">
+            <div class="content-self">
+                <h1 id="小米路由器开发板环境制作">小米路由器开发板环境制作</h1>
+<h2 id="准备条件">准备条件</h2>
+<p>a.小米路由器型号要符合支持开发板，参考下图；
+<img src="https://camo.githubusercontent.com/e8b8d39288a4f57ff23f457bc94ec33315b009a2fa83a718ea6df5c8ff713817/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363737363238373035382d33393863363533382d313362372d343164332d616433392d3937313632343362313162632e706e6723617665726167654875653d25323363386438656526636c69656e7449643d7562326530363238302d353531362d342666726f6d3d7061737465266865696768743d3436352669643d753531373632323737266f726967696e4865696768743d353831266f726967696e57696474683d363436266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3138353933267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7563663261323462392d326535652d343365322d386363382d6337363565663339623963267469746c653d2677696474683d3531362e38" alt="6d45a29018025db4cb83bfb05008e38.png">
+b.下载开发板固件（与路由器型号匹配）：选择下载&gt;ROM&gt;小米路由器3
+下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）</p>
+<ul>
+<li><a href="http://miwifi.com/miwifi_download.html">http://miwifi.com/miwifi_download.html</a>
+<ul>
+<li><img src="https://camo.githubusercontent.com/7c83defd572f7dc1b5384e83359505c4833f740c5c7e0d1dc14510be27bbcd30/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363737363337343132362d32383963386464302d613638322d343435632d396434362d6137373232633436646664392e706e6723617665726167654875653d25323366646663666326636c69656e7449643d7562326530363238302d353531362d342666726f6d3d7061737465266865696768743d3137302669643d756237623732363163266f726967696e4865696768743d323132266f726967696e57696474683d393935266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3136333137267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7534643932396664652d333738302d346562642d383433632d6436643532643030663639267469746c653d2677696474683d373936" alt="image.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="升级固件">升级固件</h2>
+<h3 id="步骤一">步骤一</h3>
+<p>路由器初始管理平台地址：<a href="http://192.168.31.1/">http://192.168.31.1</a>。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。</p>
+<h3 id="步骤二">步骤二</h3>
+<p>a.绑定路由器到自己的小米账号</p>
+<ol>
+<li>打开小米路由器的web界面，使用微信扫描登录页面的二维码安装miwifi</li>
+<li>登录后页面提示小米路由器3(R3) MiWiFi 开发版 2.27.120，表示安装成功。</li>
+</ol>
+<h2 id="安装ssh并登录到终端">安装ssh并登录到终端</h2>
+<p>必须升级固件后才开始操作安装SSH，满足条件：安装固件：1. 开发版 2.27.120；2. 用户已经绑定路由器到自己的小米账号</p>
+<h3 id="获取ssh密码">获取ssh密码</h3>
+<p>访问：https://d.miwifi.com/rom/ssh
+并登录以上的网页。网页上展示了root的密码和开启SSH的工具包，下载工具包，将下载好的文件移植到U盘，保证U盘里面的文件名为<strong>miwifi_ssh.bin。</strong>
+<img src="https://camo.githubusercontent.com/519218ec78421291941c7f5f93533901e371ec335941d9ed8bf392b6bbc87121/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363737383034353335352d65323933383039662d643536332d346138622d626138352d3434613466383538353262362e706e6723617665726167654875653d25323366396639663926636c69656e7449643d7562326530363238302d353531362d342666726f6d3d7061737465266865696768743d3130352669643d753963313964306137266f726967696e4865696768743d313331266f726967696e57696474683d373834266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d37383934267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7536366532613830302d663966332d346361632d613565372d3761353437356233613439267469746c653d2677696474683d3632372e32" alt="image.png">
+注意事项：
+使用chrome下载工具包可能会被拦截，请使用其他浏览器下载。
+安装步骤：</p>
+<pre><code>  1. 请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；
+  2. 断开小米路由器的电源，将U盘插入USB接口；
+  3. 按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；
+  4. 等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）
+</code></pre>
+<h3 id="使用ssh进入终端">使用SSH进入终端</h3>
+<p>连接小米路由器WIFI ，在终端输入：ssh <a href="mailto:root@192.168.31.1">root@192.168.31.1</a>；SSH密码在页面查看（<a href="https://d.miwifi.com/">https://d.miwifi.com/</a>）
+<img src="https://camo.githubusercontent.com/86be1c1211bac6b6808e4b3dceca8ad3d964d13c718a43f2fdf86c65aa7b29fc/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739303137363936352d32656635623131632d656364382d343838382d623732382d6537373730653565386434662e706e6723617665726167654875653d25323331353135313526636c69656e7449643d7564343033663136652d393335662d342666726f6d3d7061737465266865696768743d3335332669643d756664356261363566266f726967696e4865696768743d343431266f726967696e57696474683d393036266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3239373232267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7533303636653831312d373134352d343134342d386235642d3534626636343765303064267469746c653d2677696474683d3732342e38" alt="image.png"></p>
+<h3 id="下载潘多拉固件">下载潘多拉固件</h3>
+<p>访问：<a href="https://opt.cn2qq.com/padavan/">https://opt.cn2qq.com/padavan/</a>
+搜索 MI 打开小米路由器3的固件并下载。
+<img src="https://camo.githubusercontent.com/d2b9a4d18569417f73ce92ef5b9fd1ff255d1f7f2ee6970df960536e879ca919/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739333933333035322d33366364376135322d373532632d346461622d613264652d3665666436356131343837312e706e6723617665726167654875653d25323331323132313226636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3232382669643d753330393662386339266f726967696e4865696768743d323835266f726967696e57696474683d31313632266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3230383638267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7564626639343963342d353136612d346638302d623064632d6236636436376561356237267469746c653d2677696474683d3932392e36" alt="image.png"></p>
+<p>将下载的MI-3_3.4.3.9-099.trx 放入U盘根目录，名字不要随意更改，保证为：MI-3_3.4.3.9-099.trx；插入U盘到路由器，然后重启；</p>
+<h3 id="刷入潘多拉固件">刷入潘多拉固件</h3>
+<p>上传下载的固件到路由器的/tmp目录下：</p>
+<ul>
+<li><code>scp MI-3_3.4.3.9-099.trx root@192.168.31.1:/tmp </code></li>
+</ul>
+<p>登陆路由器的命令终端
+<code>ssh root@192.168.31.1</code>
+切换到/tmp目录下
+<code>cd /tmp</code>
+逐行按先后顺序执行以下命令将固件烧录到路由器</p>
+<ol>
+<li><code>dd if=MI-3_3.4.3.9-099.trx bs=4194304 count=1 2&gt; /dev/null | dd of=MI-3_3.4.3.9-099.trx.part1 2&gt; /dev/null</code></li>
+<li><code>dd if=MI-3_3.4.3.9-099.trx bs=4194304 skip=1 2&gt; /dev/null | dd of=MI-3_3.4.3.9-099.trx.part2 2&gt; /dev/null</code></li>
+<li><code>mtd write MI-3_3.4.3.9-099.trx.part1 kernel1</code></li>
+<li><code>mtd write MI-3_3.4.3.9-099.trx.part2 rootfs0</code></li>
+<li><code>nvram set flag_last_success=1</code></li>
+<li><code>nvram commit</code></li>
+</ol>
+<p><img src="https://camo.githubusercontent.com/d2b9a4d18569417f73ce92ef5b9fd1ff255d1f7f2ee6970df960536e879ca919/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739333933333035322d33366364376135322d373532632d346461622d613264652d3665666436356131343837312e706e6723617665726167654875653d25323331323132313226636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3232382669643d753330393662386339266f726967696e4865696768743d323835266f726967696e57696474683d31313632266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3230383638267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7564626639343963342d353136612d346638302d623064632d6236636436376561356237267469746c653d2677696474683d3932392e36" alt="image.png"></p>
+<h3 id="验证固件并重启">验证固件并重启</h3>
+<h4 id="验证md5若反馈success则表示成功如下">验证md5，若反馈success则表示成功，如下：</h4>
+<ol>
+<li><code>mtd verify MI-3_3.4.3.9-099.trx.part1 kernel1</code></li>
+<li><code>mtd verify MI-3_3.4.3.9-099.trx.part2 rootfs0</code></li>
+<li><code>reboot</code></li>
+</ol>
+<p><img src="https://camo.githubusercontent.com/a6b65e4dc03b4842bb714fccebb05ec43337810f1d37a5bb7b4e7bcdf4110c3e/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739333535353239372d32663234356465372d333664642d346136302d623636382d3234393665663435376561372e706e6723617665726167654875653d25323331333133313326636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3139302669643d653037686e266f726967696e4865696768743d323337266f726967696e57696474683d363638266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3131313037267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7535663762373565362d646664302d343064342d623838302d3538643432666263383436267469746c653d2677696474683d3533342e34" alt="image.png"></p>
+<h4 id="若反馈failed则表示失败如下需要检查分析原因后重新执行34步骤">若反馈Failed则表示失败，如下，需要检查分析原因后，重新执行3.4步骤：</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mtd verify MI-3_3.4.3.9-099.trx.part1 kernel1
+</span></span><span class="line"><span class="cl">Verifying kernel1 against MI-3_3.4.3.9-099.trx.part1 ...
+</span></span><span class="line"><span class="cl">Failed to <span class="nb">hash</span> MI-3_3.4.3.9-099.trx.part1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://camo.githubusercontent.com/5ff1e00f48dbf42da09e19461c9dcd0398c67fb65789488544e10eccfa34cb89/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739323134303538372d32353435356163322d313166312d343763612d626537632d6335653265343037653138302e706e6723617665726167654875653d25323331353135313526636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3238322669643d753266343066336637266f726967696e4865696768743d333533266f726967696e57696474683d393639266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3234343939267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7538356265306130332d306564302d346539302d393830302d3065623963353834383635267469746c653d2677696474683d3737352e32" alt="image.png"></p>
+<h2 id="打开路由器潘多拉固件的web界面">打开路由器潘多拉固件的web界面</h2>
+<p>待路由器重启后，连接路由器WiFi（SSID：PDCN，密码：1234567890），在浏览器输入 192.168.123.1 ，回 车进行登陆，账户和密码都是 admin。
+<img src="https://camo.githubusercontent.com/10e478ee810c47bad70fcebcadc238e61a5db1f342072e3ad2beaf1316be31a8/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739343634343836322d34313262666537612d643665392d346634642d626365322d6465656634666461663933662e706e6723617665726167654875653d25323366656665666526636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3431362669643d753830323634633063266f726967696e4865696768743d353230266f726967696e57696474683d31373431266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3238353036267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7532653661656563372d316131302d343962322d616531372d3131393065336537323565267469746c653d2677696474683d313339322e38" alt="image.png"></p>
+<h2 id="设置代理">设置代理</h2>
+<h3 id="导入ss地址">导入ss地址</h3>
+<p>把VPN的ss复制到以下文本，打开开启按钮 ，必须插入网线在联网情况下点击 重新成功配置 ，等待几分钟系统会在线安装一些服务。查看log等运行安装完成后，重启路由器。
+<img src="https://camo.githubusercontent.com/90ae53724a26b4ecc2eb71875e86066a5643bebbb0b2a3f13b992e81d33df9b5/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739343734393339372d62633237643561312d366564642d346238372d393632382d3637343766383562666633312e706e6723617665726167654875653d25323337323731373026636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3735382669643d753766653937356233266f726967696e4865696768743d393437266f726967696e57696474683d31393131266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d313738303033267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7535326630316332372d633062612d346636322d626539322d3831383938623663313332267469746c653d2677696474683d313532382e38" alt="image.png"></p>
+<h3 id="测试代理是否设置成功">测试代理是否设置成功</h3>
+<p>有google图标表示连接正常，如果异常需要检查配置，查看高级设置配置DNS
+<img src="https://camo.githubusercontent.com/b6b212c6b63922280f3fd0318fdd8384bbb2f40539a0f67f0b44db47c46bbabd/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739343832333734342d36356334316538372d643430372d346237362d616165632d6430626539333535353933612e706e6723617665726167654875653d25323361646164616426636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3733312669643d753032386538303965266f726967696e4865696768743d393134266f726967696e57696474683d31303437266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d313034333636267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7534326336356561612d616563312d343566362d623336352d6536366633343235646364267469746c653d2677696474683d3833372e36" alt="image.png"></p>
+<h3 id="以下是更加详细的代理设置不需要特别配置">以下是更加详细的代理设置（不需要特别配置）</h3>
+<p><img src="https://camo.githubusercontent.com/845b69c73cd40be9720fac2e978836dde21197cfa0244e39a9bea22e36b12326/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363739373930373334322d31663863396139662d376431372d343932312d383039312d6463333436343233386138372e706e6723617665726167654875653d25323363346333633326636c69656e7449643d7535663264393834392d343261382d342666726f6d3d7061737465266865696768743d3734362669643d756163326264356162266f726967696e4865696768743d393332266f726967696e57696474683d31303235266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3933313537267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7532363230376632652d376336392d343735362d393633342d3566316332336630343336267469746c653d2677696474683d383230" alt="image.png"></p>
+<h3 id="高级设置">高级设置</h3>
+<p><img src="https://camo.githubusercontent.com/e3e4d5fb5c92c90dd1a886af0935ab914ffffa460d74c23a1d754d9df6bce470/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363830353232363737382d34646365333262302d353632382d343439382d616363302d3463303230333462353164392e706e6723617665726167654875653d25323365316466646526636c69656e7449643d7566663030333834332d363130612d342666726f6d3d7061737465266865696768743d3735382669643d756331333030353832266f726967696e4865696768743d393437266f726967696e57696474683d373431266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3735393135267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7563306464383165382d386233662d346331372d626236342d3464333231386635306434267469746c653d2677696474683d3539322e38" alt="image.png"></p>
+<h2 id="参考">参考：</h2>
+<ul>
+<li><a href="https://github.com/kelleygo/mini3?tab=readme-ov-file">原创来源github</a></li>
+</ul>
+
+            </div>
             
-                
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/linux/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                linux
-            </div>
+                <div class="tags">
+                    
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/website
+                                    '>
+                                <i class="fa fa-tag"></i> website
+                            </a>
+                        </div>
+                    </span>
+                    
+                </div>
+            
         </div>
-    </a>
+        
+            
+                <div class="pre-next">
+                    
+    
+        
+        <a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="pre pre-last" style="text-align: center;">
+            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
+            <div class="pre-title-root">
+                <span>Centos7.x配置Go开发环境</span>
+            </div>
+        </a>
+        
+    
+    
+
+                </div>
+            
+        
+    
 </div>
 
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/website/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                website
-            </div>
-        </div>
-    </a>
-</div>
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/docker/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                docker
-            </div>
-        </div>
-    </a>
-</div>
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/ide/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                IDE
-            </div>
-        </div>
-    </a>
-</div>
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/k8s/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                k8s
-            </div>
-        </div>
-    </a>
-</div>
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/nginx/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                nginx
-            </div>
-        </div>
-    </a>
-</div>
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/ssh/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                ssh
-            </div>
-        </div>
-    </a>
-</div>
-
-
-
-<div class="taxo-col taxo-col-tag">
-    <a href="https://hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
-        <div class="tag-taxo-card">
-            <div class="tag-taxo-text">
-                <span><i class="fa fa-tag"></i></span>
-                开发环境
-            </div>
-        </div>
-    </a>
-</div>
-
+    
+        <div class="content-last">
+            
+                <button class="aixin content-last-item efct-button">
+                    <i class="fa fa-heart"></i>
+                </button>
+            
+            
+                <button class="pinglun content-last-item efct-button">
+                    <i class="fa fa-comment"></i>
+                </button>
             
         </div>
     
-</div>
 
 
             </div>
@@ -327,6 +399,11 @@
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
+        
+            <div class="button-r">
+                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> 目录</span></button>
+                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> 评论</span></button>
+            </div>
         
         <div id="r1">
             
@@ -392,17 +469,20 @@
 
 
 
+    
+    
+
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">最新文章</div>
+        <div class="other-qita text-wbd">相关文章</div>
         <div class="xian"></div>
     </div>
     <div class="list">
         
-            <a href="https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/">
+            <a href="https://hujian.xyz/posts/%E4%BD%BF%E7%94%A8aws-cloudfront%E5%81%9Acdn%E8%BD%AC%E5%8F%91/">
                 
-<a href="https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/">
+<a href="https://hujian.xyz/posts/%E4%BD%BF%E7%94%A8aws-cloudfront%E5%81%9Acdn%E8%BD%AC%E5%8F%91/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -411,24 +491,19 @@
         </div>
         <div class="list-right">
             <div class="other-title">
-                小米路由器开发板
+                使用aws-cloudfront做CDN转发
             </div>
-            <div class="other-summary">小米路由器开发板环境制作 准备条件 a.小米路由器型号要符合支持开发板，参考下图； b.下载开发板固件（与路由器型号匹配）：选择下载&gt;ROM&gt;小米路由器3 下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）
-http://miwifi.com/miwifi_download.html 升级固件 步骤一 路由器初始管理平台地址：http://192.168.31.1。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。
-步骤二 a.绑定路由器到自己的小米账号
-打开小米路由器的web界面，使用微信扫描登录页面的二维码安装miwifi 登录后页面提示小米路由器3(R3) MiWiFi 开发版 2.27.120，表示安装成功。 安装ssh并登录到终端 必须升级固件后才开始操作安装SSH，满足条件：安装固件：1. 开发版 2.27.120；2. 用户已经绑定路由器到自己的小米账号
-获取ssh密码 访问：https://d.miwifi.com/rom/ssh 并登录以上的网页。网页上展示了root的密码和开启SSH的工具包，下载工具包，将下载好的文件移植到U盘，保证U盘里面的文件名为miwifi_ssh.bin。 注意事项： 使用chrome下载工具包可能会被拦截，请使用其他浏览器下载。 安装步骤：
-1. 请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；2. 断开小米路由器的电源，将U盘插入USB接口；3. 按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；4. 等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）使用SSH进入终端 连接小米路由器WIFI ，在终端输入：ssh root@192.168.31.1；SSH密码在页面查看（https://d.miwifi.com/） 下载潘多拉固件 访问：https://opt.cn2qq.com/padavan/ 搜索 MI 打开小米路由器3的固件并下载。 将下载的MI-3_3.4.3.9-099.trx 放入U盘根目录，名字不要随意更改，保证为：MI-3_3.4.3.9-099.trx；插入U盘到路由器，然后重启；
-刷入潘多拉固件 上传下载的固件到路由器的/tmp目录下：</div>
-            <div class="other-date">2024-8-21</div>
+            <div class="other-summary">CND转发到v2ray服务 环境:
+域名一个 aws cloudfront服务 数据转发流程 A.example.com-&gt;cloudfront-&gt;B.example.com-&gt;ip.ec2.port 注意事项 踩过的坑： v2ray-plugin报错 http: TLS handshake error from 64.252.173.97:23912: read tcp 172.21.0.3:443-&gt;64.252.173.97:23912: read: connection reset by peer 原因为2层(EC2,cloudfront)TLS证书不一致; 第一个想法就是将两个证书整成一致，然后cloudfront就上传&quot;Let&rsquo;s Encrypt自签的证书，发现使用自上传的证书cloudfront根本不转发数据了;得出一个结论:cloudfront必须使用它请求生成的tls证书； 解决方案：A.example.com-&gt;cloudfront-&gt;ip.ec2.port转发流程修改为A.example.com-&gt;cloudfront-&gt;B.example.com-&gt;ip.ec2.port v2ray-plugin报错not found in 'Sec-Websocket-Version' header 1 cloudfront ws一直是v2ray.com/core/transport/internet/websocket: failed to convert to WebSocket connection &gt; websocket: unsupported version: 13 not found in &#39;Sec-Websocket-Version&#39; header 原因是cloudfront没有配置转发HTTP请求头,CloudFront 预设并不会转发所有的 HTTP request headers， 有些 request headers 在经过 CloudFront 之后就被丟掉了导致 v2ray 无法识别到必要的数据。 需要更改 origin request policies 為 Managed-AllViewer，這樣它才會轉發所有的 headers。 - 解决方案：cloudfront设置源请求策略为```Managed-AllViewer```cloudfront转发数据到源失败，解决方法是需要更改行为策略-&gt;缓存策略名称(Managed-CachingDisabled)-&gt;源请求策略名称(Managed-AllViewerExceptHostHeader) 源服务器没有接收到数据,错误的提示： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 root@localhost ~ # curl -v https://proxy.</div>
+            <div class="other-date">2023-3-20</div>
         </div>
     </div>
 </a>
             </a>
         
-            <a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+            <a href="https://hujian.xyz/posts/%E4%BD%BF%E7%94%A8cloudflare%E8%BD%AC%E5%8F%91ssh%E7%AB%AF%E5%8F%A3/">
                 
-<a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+<a href="https://hujian.xyz/posts/%E4%BD%BF%E7%94%A8cloudflare%E8%BD%AC%E5%8F%91ssh%E7%AB%AF%E5%8F%A3/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -437,25 +512,20 @@ http://miwifi.com/miwifi_download.html 升级固件 步骤一 路由器初始管
         </div>
         <div class="list-right">
             <div class="other-title">
-                Centos7.x配置Go开发环境
+                使用cloudflare转发ssh端口
             </div>
-            <div class="other-summary">Centos7.x配置Go开发环境 安装golang 准备环境
-$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
-$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz https://studygolang.com/dl下载最新的源码包编译
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 然后在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-# Golangexport GO111MODULE=onexport GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOCACHE=/tmp/gocacheexport GONOSUMDB=&#34;github.</div>
-            <div class="other-date">2024-4-21</div>
+            <div class="other-summary">Cloudflare Tunnel cloudflare 提供的免费加密通道，通过 cloudflare 的 cnd 访问部署在内网的服务，比如 web,ssh,smb,tcp 等。 其工作方式类似于 frp，可以将本地服务发布到公网。只不过 frp 所需的服务器 IP 在 Cloudflare Tunnel 中变成了 Cloudflare 提供的节点。 相比于 frp 省去了服务器的成本。
+1.准备 1.1 先决条件 必须需要一个 cloudflare 账号，以及开通 cloudflare zero trust。 cloudflare：https://www.cloudflare.com/ zero trust: https://one.dash.cloudflare.com/ 在你的需要内网穿透的设备上安装 cloudflared（cf 的本地 cli 客户端）
+ubuntu/centos amd64架构 curl -L 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64' -o /usr/bin/cloudflared &amp;&amp; chmod +x /usr/bin/cloudflared arm64 curl -L 'https://github.</div>
+            <div class="other-date">2022-7-21</div>
         </div>
     </div>
 </a>
             </a>
         
-            <a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+            <a href="https://hujian.xyz/posts/%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/">
                 
-<a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+<a href="https://hujian.xyz/posts/%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -464,26 +534,19 @@ $ vim /etc/profile 加入以下内容：
         </div>
         <div class="list-right">
             <div class="other-title">
-                ubuntu 22.04 安装go
+                cn博客添加音乐组件
             </div>
-            <div class="other-summary">ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;&amp; apt-get upgrade -y 环境安装 mkdir ~/go
-cd ~/go
-wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
-tar -C /usr/local go1.22.2.linux-amd64.tar.gz
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&#34;github.com&#34;export GONOPROXY=&#34;github.com&#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&#34;github.</div>
-            <div class="other-date">2024-4-21</div>
+            <div class="other-summary">1. 博客底部添加音乐组件 音乐效果
+1.1 直接上代码示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 &lt;!-- 为博客底部添加音乐组件 --&gt; &lt;div id=&#34;player&#34; class=&#34;aplayer&#34;&gt;&lt;/div&gt; &lt;link href=&#34;https://files.cnblogs.com/files/shwee/APlayer.min_v1.10.1.css&#34; rel=&#34;stylesheet&#34;&gt; &lt;script src=&#34;https://files.</div>
+            <div class="other-date">2022-5-21</div>
         </div>
     </div>
 </a>
             </a>
         
-            <a href="https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
+            <a href="https://hujian.xyz/posts/%E7%94%9F%E6%88%90https%E8%AF%81%E4%B9%A6/">
                 
-<a href="https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
+<a href="https://hujian.xyz/posts/%E7%94%9F%E6%88%90https%E8%AF%81%E4%B9%A6/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -492,19 +555,20 @@ export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/bin
         </div>
         <div class="list-right">
             <div class="other-title">
-                gcc windows环境安装(目前13.2版本)
+                生成HTTPS证书
             </div>
-            <div class="other-summary">文章目录 1 2 3 4 5 6 7 8 9 10 11 一、简介 1. MinGW 和 MinGW-W64 区别和联系 二、下载 1. 从 sourceforge.net 下载 2. 从 github 下载 3. 从 镜像站点 下载 三、安装与配置 1. 在线安装 2. 离线安装 3. 环境配置 四、总结 一、简介 MinGW 和 MinGW-W64 区别和联系 MinGW和MinGW-W64都是用于Windows平台的轻量级GNU工具链，用于开发和编译C和C++程序。 MinGW（Minimalist GNU for Windows）是一个32位的GNU工具链，它提供了一套基于GNU的开发环境，包括GCC编译器和一些GNU库，可以用来编译Windows下的C和C++程序。但MinGW只支持32位程序的编译。
-MinGW-W64是一个64位的GNU工具链，是MinGW的升级版，原本它是MinGW的分支，后来成为独立发展的项目，它支持同时编译32位和64位程序。它包括了一系列的GNU库和工具，例如GCC、Binutils、GDB等，还支持一些实用工具和库，如OpenMP、MPI等。</div>
-            <div class="other-date">2023-11-2</div>
+            <div class="other-summary">生成HTTPS证书 1. 使用loge命令的方式生成HTTPS证书 参数说明：
+*.domain.com 替换为你的域名，支持所有子域名 &ndash; dns 是指域名在哪个云厂商，支持的云厂商有alidns/cloudflare aws;详细参考github官方文档 CLOUDFLARE_EMAIL=&#34;xx@gmail.com&#34; \CLOUDFLARE_API_KEY=&#34;xxx&#34; \lego --email &#34;xx@gmail.com&#34; --dns cloudflare --domains &#34;*.domain.com&#34; run 2 使用certbot的方式生成HTTPS证书 xx.domain.com 替换为你指定的子域名，只支持单个子域名
+sudo certbot certonly --agree-tos --email xx@gmail.com --webroot -w /var/lib/letsencrypt/ -d xx.domain.com 3.检查HTTPS证书是否生效 cfssl-certinfo -domain xx.domain.com:443 4 参考文档： 使用certbot的方式生成HTTPS证书 使用lego手动生成tls证书参数文档 </div>
+            <div class="other-date">2022-3-21</div>
         </div>
     </div>
 </a>
             </a>
         
-            <a href="https://hujian.xyz/posts/nginx-301%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+            <a href="https://hujian.xyz/posts/seo%E4%BC%98%E5%8C%96/">
                 
-<a href="https://hujian.xyz/posts/nginx-301%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+<a href="https://hujian.xyz/posts/seo%E4%BC%98%E5%8C%96/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -513,94 +577,16 @@ MinGW-W64是一个64位的GNU工具链，是MinGW的升级版，原本它是MinG
         </div>
         <div class="list-right">
             <div class="other-title">
-                nginx 301跳转问题总结
+                seo网站搜索优化
             </div>
-            <div class="other-summary">1.nginx 301跳转问题背景 在使用hugo部署博客，部署方案nginx+docker,在浏览器地址使用url访问静态资源目录时，发现默认跳转到了http协议的地址。 调出浏览器发现客户端发送的http请求收到了一个301状态码的响应，并且响应头中的Location字段便是跳转到的http协议的地址。 2.原因分析 为啥服务端会返回301呢？首先需要弄清楚状态码的含义。HTTP协议中3xx开头的状态响应码都是表示重定向的响应。根据RFC的定义：
-301 Moved Permanently
-302 Found
-303 See Other
-307 Temporary Redirect
-301是永久重定向。如果使用Nginx作为HTTP服务器，那么当用户输入一个不存在的地址之后，基本上会有两种情况：1.返回404状态码，2.返回301状态码和重定向地址。404 Not Found不做讨论，只说下301 Moved Permanently的处理过程。 首先需要明确的问题是，301重定向在什么情况下会被触发呢？
-答案是：Nginx负责设置301 Moved Permanently状态码。但nginx.conf控制Nginx如何处理301 Moved Permanently状态码！ 换句话说，要不要进行页面重定向，和怎么重定向，完全是用户配置的结果！ Nginx主动设置301 Moved Permanently状态码只有一种情况，当用户在浏览器输入了一个url地址，末尾部分是一个文件目录且不以斜杠”/“结尾，比如 “www.test.com/index” 。 Nginx没有找到index这个文件，但发现了index是个目录。于是本次访问的返回状态码就会被设置成301 Moved Permanently。 浏览器与Nginx的通信过程如下所示：
-一般情况下，我们会在nginx.conf中配置absolute_redirect ，server_name_in_redirect和port_in_redirect，以便到达个性化的重定向功能。其中absolute_redirect控制Location url的生成方式。
-absolute_redirect设置成on，则生成绝对路径作为Location url。 absolute_redirect设置成off，则生成相对路径作为Location url。 只有absolute_redirect设置为on时，另外两个配置才会生效。
-3. 解决方法 设置absolute_redirect为off，构造相对路径作为Location url，示例如下：</div>
-            <div class="other-date">2023-7-25</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="https://hujian.xyz/posts/goland-ide%E8%BF%BD%E6%96%B0/">
-                
-<a href="https://hujian.xyz/posts/goland-ide%E8%BF%BD%E6%96%B0/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                goland IDE追新
-            </div>
-            <div class="other-summary">追新2023，goland激活码快速激活至2099年！ 当前教程支持的版本：2020.2 ~ GoLand 2023.2 232.8453.111
-前言：
-goland 软件开发公司 jetbrains 在 2022 年 4 月发布了 goland 2022年第一个大版本2022.1，同时也带来了最严厉的反破解机制，之前所有的破解方案全部失效！在这样的背景下，在奋战了几周左右之后还是成功破解了最新版本2022.1.2！之前的教程中，在破解过程中需要各位码友们自己去操作一些东西，改一下配置，造成了部分不仔细的码友 goland 重启后打不开（虽然后续联系到我修复并激活成功，但是这样确实浪费时间和精力）。同时由于各个版本的配置稍微有些变化，所以本次教程更新给大家带来真正硬核的破解方式：一键脚本激活！！！不需要各位码友有任何多余的操作，只需要双击 vbs 脚本执行，然后重启 goland 就可以完成激活！
-注意：本脚本做了向下兼容到2020.1，如果您不想升级，直接执行脚本后重启软件就可以完成激活！
-破解过程详解：
-1、软件准备 （1）goland 软件安装包（官网下载安全又快速）：https://www.jetbrains.com/goland/download/#section=windows
-（2）获取激活码，激活包下载。各位码友们只管关心下图中 golandActive.vbs 脚本文件即可！
-网盘地址(2023/07/23更新)：https://pan.baidu.com/s/1hVWbs9z-Deu5RmQ0PO0hTQ?pwd=3fo7
-提取码：3fo7
-网盘下载后文件zip解压密码：abc1
-2、破解过程 2.1软件安装 在官网下载软件后一直点击 Next 即可（已经安装的码友们不用理会），然后打开 goland，发现需要注册！这里我们先不管，先点击 Exit 退出，准备开始运行激活脚本。 2.2 获取激活码 请确保 goland 软件处于关闭状态！ 鼠标双击网盘下载的破解包里面的 golandActive.vbs 得到如下界面，点击确定按钮即可！</div>
-            <div class="other-date">2023-7-21</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="https://hujian.xyz/posts/kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                
-<a href="https://hujian.xyz/posts/kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                kubernetes常用命令
-            </div>
-            <div class="other-summary">1. 将service端口暴露到本地 比如将生产环境的redis暴露到本地6379端口
-1 kubectl port-forward service/redis -n [namesplace] 6379:6379 2. 进入容器中 kubectl exec -it [pod] -n [namesplace] -- bash 3. 查看日志 查看最后1行的日志
-kubectl logs -f --tail 1 [pod] -n [namesplace] 查看最后一分钟的所有日志
-kubectl -n [namesplace] logs [pod] --since=1m 查看指定时间
-kubectl -n -n [namesplace] logs -f [pod] --since-time=&#34;2022-10-24T02:54:03.467+01:00&#34; 4. 查看配置： kubectl get pod product-6b5c98478b-rpgr6 --namespace=product-prod -o yamlkubectl describe pods product-6b5c98478b-rpgr6 --namespace=product-prod 5.</div>
-            <div class="other-date">2023-5-10</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="https://hujian.xyz/posts/ubuntu22.04%E5%AE%89%E8%A3%85gitlab/">
-                
-<a href="https://hujian.xyz/posts/ubuntu22.04%E5%AE%89%E8%A3%85gitlab/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                ubuntu22.04安装gitlab
-            </div>
-            <div class="other-summary">1. gitlab安装前准备 系统版本：Ubuntu 22.04.1 LTS 1.1 更新系统环境 sudo apt updatesudo apt upgrade 1.2 安装和配置必须的依赖项 1 2 sudo apt-get install -y curl openssh-server ca-certificates tzdata perl sudo apt-get install curl 2.下载和安装gitlab 2.1 下载指定的版本 1 curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash 2.2 开始安装 注意：localhost为访问gitlab的地址，85为访问gitlab的端口号
-1 sudo EXTERNAL_URL=&#34;http://localhost:85&#34; apt-get install gitlab-ce=15.9.3-ce.0 除非您在安装过程中指定了自定义密码，否则将随机生成一个密码并存储在 /etc/gitlab/initial_root_password文件中(出于安全原因，24 小时后，此文件会被第一次 gitlab-ctl reconfigure 自动删除， 因此若使用随机密码登录，建议安装成功初始登录成功之后，立即修改初始密码）。使用此密码和用户名 root 登录。</div>
-            <div class="other-date">2023-4-28</div>
+            <div class="other-summary">1. seo网站搜索优化 搜索排行问题，主要是两方面优化方向：
+第一是外链引用 第二是让搜索引擎的爬虫能收录/分析页面中的文本 技术相关的是第二，针对技术上的解决方案:
+分析是否指定的浏览器才能展示结果，比如google游览器能正常访问网页，IE游览器访问 404，这样会影响搜索引擎的爬虫对真实内容的爬取，搜索引擎收录到这样的页面，一个相关的词都没有，搜索索引是没法建立的。解决方案是去掉这个判断逻辑。
+网站是动态内容，且没有提供sitemap文件。这样的话，意味着即便没有第一个问题，搜索引擎也只会收录到了根页面，其它主页面、各个产品页，是不可能被收录到的，关键词索引也无从建立。解决方案是通过工具自动/手动生成一个根目录sitemap文件，和前端页面一起部署。
+在网关title加上name为keywords和description 以及对应的content描述
+示例： 1 &lt;meta name=&#34;keywords&#34; content=&#34;LoRaWAN,LoRaWAN module,LoRaWAN gateway,LoRaWAN 解决方案&#34;&gt;&lt;meta name=&#34;description&#34; content=&#34;....&#34;&gt; 通过Google/百度站点管理工具分析数据，通过此分析 官网相关的关键列表、搜索率、点击率等指标在一定时间范围内的变化，一个是看之前是什么状态，另外一个 要看解决了以上3个问题后，后面有没有得到改进。 2. 解决方案 目的：
+提交seo收录，sitemap站点地图,将robots.t文件和sitemap.xml文件放到网站根目录下，示例文件如下: 蜘蛛访问站点权限 robots 站点sitemap地图 sitemap 通过站长工具分析网关排名以及关键字索引 百度站长 google站长 通过模拟器分析网站关键字收录情况 蜘蛛模拟-Screaming Frog SEO Spider 3 参考 seo优化 </div>
+            <div class="other-date">2022-3-10</div>
         </div>
     </div>
 </a>
@@ -610,13 +596,53 @@ kubectl -n -n [namesplace] logs -f [pod] --since-time=&#34;2022-10-24T02:54:03.4
 </div>
         </div>
         <div id="r2">
-            
+            <div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: "8rDSi5Yno1x54JaRiqlaJenc-gzGzoHsz",
+        appKey: "lPOyu3wZHZxR7QnsQeDWzkJr",
+        avatar: "robohash",
+        placeholder: "输入你的评论",
+        requiredFields: ["nick"],
+        visitor:  true ,
+        pageSize:  5 ,
+});
+</script>
+
         </div> 
     </div>
 </div>
 
             </div>
         </div>
+    </div>
+</div>
+
+    
+
+<div class="sponsor">
+    <div class="sponsor-self">
+        <div class="sponsor-title">赞赏</div>
+        <div class="sponsor-btn">
+            
+                
+                    <div class="sponsor-btn-1">微信支付</div>
+                
+                
+            
+        </div>
+        
+        <div class="sponsor-img">
+            
+                
+                    <img class="sponsor-img-1" src="/images/wechatpay.png" alt="">
+                
+                
+            
+        </div>
+        <div class="cancel efct-button">取消</div>
     </div>
 </div>
 
