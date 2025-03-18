@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Mar 2025 11:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Mar 2025 15:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ansible自动化安装docker</title>
+      <link>https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/</link>
+      <pubDate>Tue, 18 Mar 2025 15:19:04 +0800</pubDate>
+      
+      <guid>https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/</guid>
+      <description>ansible自动化安装docker.md 本地软件准备 支持linux/macOS上运行。
+1. 环境依赖： 依赖 python3-pip，
+安装ansible ，以ubuntu2204为例 sudo apt update# 更新python版本sudo apt install python3-pip -y# 安装ansiblesudo apt install ansible# 验证 pip 是否安装成功：python3 -m pip --versionpip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10) 2. 脚本下载 ansible-install-docker 快速安装docker 1.在hosts.yml中添加要部署的ssh登录信息/服务器内外网IP地址，比如:
+1 2 3 4 5 6 7 8 9 dev: #这个命名在1中被引用 hosts: 192.</description>
+    </item>
+    
     <item>
       <title>ubuntu2404手动安装docker</title>
       <link>https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/</link>

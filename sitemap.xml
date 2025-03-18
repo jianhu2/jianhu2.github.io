@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/</loc>
+    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hujian.xyz/tags/linux/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,10 +14,10 @@
     <loc>https://hujian.xyz/tags/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/</loc>
+    <loc>https://hujian.xyz/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hujian.xyz/</loc>
+    <loc>https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hujian.xyz/tags/website/</loc>

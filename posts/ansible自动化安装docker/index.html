@@ -3,44 +3,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>深海映星辰 | ubuntu 22.04 安装go</title>
-    <meta name="description" content="ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;&amp; apt-get upgrade -y 环境安装 mkdir ~/go
-cd ~/go
-wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
-tar -C /usr/local go1.22.2.linux-amd64.tar.gz
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&#34;github.com&#34;export GONOPROXY=&#34;github.com&#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&#34;github. ">
-    <link rel="canonical" href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
+    <title>深海映星辰 | ansible自动化安装docker</title>
+    <meta name="description" content="ansible自动化安装docker.md 本地软件准备 支持linux/macOS上运行。
+1. 环境依赖： 依赖 python3-pip，
+安装ansible ，以ubuntu2204为例 sudo apt update# 更新python版本sudo apt install python3-pip -y# 安装ansiblesudo apt install ansible# 验证 pip 是否安装成功：python3 -m pip --versionpip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10) 2. 脚本下载 ansible-install-docker 快速安装docker 1.在hosts.yml中添加要部署的ssh登录信息/服务器内外网IP地址，比如:
+1 2 3 4 5 6 7 8 9 dev: #这个命名在1中被引用 hosts: 192. ">
+    <link rel="canonical" href="https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="ubuntu 22.04 安装go" />
-<meta property="og:description" content="ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;&amp; apt-get upgrade -y 环境安装 mkdir ~/go
-cd ~/go
-wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
-tar -C /usr/local go1.22.2.linux-amd64.tar.gz
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&#34;github.com&#34;export GONOPROXY=&#34;github.com&#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&#34;github." />
+    <meta property="og:title" content="ansible自动化安装docker" />
+<meta property="og:description" content="ansible自动化安装docker.md 本地软件准备 支持linux/macOS上运行。
+1. 环境依赖： 依赖 python3-pip，
+安装ansible ，以ubuntu2204为例 sudo apt update# 更新python版本sudo apt install python3-pip -y# 安装ansiblesudo apt install ansible# 验证 pip 是否安装成功：python3 -m pip --versionpip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10) 2. 脚本下载 ansible-install-docker 快速安装docker 1.在hosts.yml中添加要部署的ssh登录信息/服务器内外网IP地址，比如:
+1 2 3 4 5 6 7 8 9 dev: #这个命名在1中被引用 hosts: 192." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-21T16:19:04+08:00" />
-<meta property="article:modified_time" content="2024-04-21T00:00:00+00:00" />
+<meta property="og:url" content="https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-03-18T15:19:04+08:00" />
+<meta property="article:modified_time" content="2025-03-18T00:00:00+00:00" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ubuntu 22.04 安装go"/>
-<meta name="twitter:description" content="ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;&amp; apt-get upgrade -y 环境安装 mkdir ~/go
-cd ~/go
-wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
-tar -C /usr/local go1.22.2.linux-amd64.tar.gz
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&#34;github.com&#34;export GONOPROXY=&#34;github.com&#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&#34;github."/>
+<meta name="twitter:title" content="ansible自动化安装docker"/>
+<meta name="twitter:description" content="ansible自动化安装docker.md 本地软件准备 支持linux/macOS上运行。
+1. 环境依赖： 依赖 python3-pip，
+安装ansible ，以ubuntu2204为例 sudo apt update# 更新python版本sudo apt install python3-pip -y# 安装ansiblesudo apt install ansible# 验证 pip 是否安装成功：python3 -m pip --versionpip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10) 2. 脚本下载 ansible-install-docker 快速安装docker 1.在hosts.yml中添加要部署的ssh登录信息/服务器内外网IP地址，比如:
+1 2 3 4 5 6 7 8 9 dev: #这个命名在1中被引用 hosts: 192."/>
 
     
         
@@ -193,19 +178,19 @@ export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/bin
             </div>
         
         <div class="hero-content">
-            <div class="hero-title">ubuntu 22.04 安装go</div>
+            <div class="hero-title">ansible自动化安装docker</div>
             <div class="hero-subtitle"></div>
             <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2024-4-21 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2024-4-21 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2025-3-18 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2025-3-18 &nbsp;</span>
                     <span class="no-wrap"><i class="fa fa-folder"></i>
                         未收录
                         
                     </span>    
             </div>
             <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 187 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> 阅读时间: 1 分钟 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 422 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> 阅读时间: 2 分钟 &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-eye"></i> 阅读量: <span id="busuanzi_value_page_pv"></span></span>
             </div>
         </div>
@@ -241,42 +226,58 @@ export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/bin
     
         <div class="content">
             <div class="content-self">
-                <h1 id="ubuntu-2204-安装go适用ubuntu20以上版本">ubuntu 22.04 安装go(适用ubuntu20以上版本)</h1>
-<h2 id="环境准备">环境准备</h2>
-<pre tabindex="0"><code> apt update &amp;&amp; apt-get upgrade -y
-</code></pre><h2 id="环境安装">环境安装</h2>
-<p>mkdir ~/go</p>
-<p>cd ~/go</p>
-<p>wget <a href="https://go.dev/dl/go1.22.2.linux-amd64.tar.gz">https://go.dev/dl/go1.22.2.linux-amd64.tar.gz</a></p>
-<p>tar -C /usr/local go1.22.2.linux-amd64.tar.gz</p>
-<h2 id="设置环境变量">设置环境变量</h2>
-<p>Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：</p>
+                <h1 id="ansible自动化安装dockermd">ansible自动化安装docker.md</h1>
+<h1 id="本地软件准备">本地软件准备</h1>
+<p>支持linux/macOS上运行。</p>
+<h2 id="1-环境依赖">1. 环境依赖：</h2>
+<p>依赖 python3-pip，</p>
 <ul>
-<li>bin：包含编译后的可执行命令</li>
-<li>pkg：包含包对象</li>
-<li>src：包含Go的源文件，它们被组织成包</li>
+<li><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">安装ansible</a>
+，以ubuntu2204为例</li>
 </ul>
-<p>因此首先创建go语言的工作空间：</p>
-<pre tabindex="0"><code>$  mkdir $HOME/gowork
-</code></pre><p>在配置文件中添加环境变量</p>
-<pre tabindex="0"><code>$ vim /etc/profile
-</code></pre><p>加入以下内容：</p>
 <pre tabindex="0"><code>
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/gowork
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH
-export GONOSUMDB=&#34;github.com&#34;
-export GONOPROXY=&#34;github.com&#34;
-export GOPROXY=https://goproxy.cn,direct
-export GOPRIVATE=&#34;github.com&#34;
-</code></pre><p>设置使用git方式拉取私人仓库</p>
-<pre tabindex="0"><code> git config --global url.&#34;git@github.com:&#34;.insteadOf &#34;https://github.com/&#34;
-</code></pre><p>使配置文件生效</p>
-<pre tabindex="0"><code>$ source /etc/profile
-</code></pre><p>安装完成后查看go版本以确认：</p>
-<pre tabindex="0"><code>$ go version
-</code></pre><p>之后执行<code>go env</code>来检查环境变量是否配置成功：</p>
+sudo apt update
+# 更新python版本
+sudo apt install python3-pip -y
+
+# 安装ansible
+sudo apt install ansible
+
+# 验证 pip 是否安装成功：
+python3 -m pip --version
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+</code></pre><h2 id="2-脚本下载">2. 脚本下载</h2>
+<ul>
+<li><a href="https://github.com/jianhu2/ansible-docker">ansible-install-docker</a></li>
+</ul>
+<h1 id="快速安装docker">快速安装docker</h1>
+<p>1.在hosts.yml中添加要部署的ssh登录信息/服务器内外网IP地址，比如:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">dev</span><span class="p">:</span><span class="w"> </span><span class="c">#这个命名在1中被引用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">192.168.50.60</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vars</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ansible_user</span><span class="p">:</span><span class="w"> </span><span class="l">root</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ansible_port</span><span class="p">:</span><span class="w"> </span><span class="m">22</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ansible_ssh_private_key_file</span><span class="p">:</span><span class="w"> </span><span class="l">~/.ssh/id_ed25519</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">INTRANET_IP</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;192.168.50.60&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">INTERNET_IP</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;192.168.50.60&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>2.运行ansible，会同时安装docker/docker-compose等:</p>
+<p><code>ansible-playbook -i ./hosts.yml ./install_docker.yml</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -319,71 +320,145 @@ export GOPRIVATE=&#34;github.com&#34;
 </span><span class="lnt">38
 </span><span class="lnt">39
 </span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">GO111MODULE</span><span class="o">=</span><span class="s1">&#39;on&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOARCH</span><span class="o">=</span><span class="s1">&#39;amd64&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOBIN</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOCACHE</span><span class="o">=</span><span class="s1">&#39;/tmp/gocache&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOENV</span><span class="o">=</span><span class="s1">&#39;/root/.config/go/env&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOEXE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOEXPERIMENT</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOFLAGS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOHOSTARCH</span><span class="o">=</span><span class="s1">&#39;amd64&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOHOSTOS</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOINSECURE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOMODCACHE</span><span class="o">=</span><span class="s1">&#39;/home/go/path/pkg/mod&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GONOPROXY</span><span class="o">=</span><span class="s1">&#39;github.com&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GONOSUMDB</span><span class="o">=</span><span class="s1">&#39;github.com&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOOS</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOPATH</span><span class="o">=</span><span class="s1">&#39;/home/go/path&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOPRIVATE</span><span class="o">=</span><span class="s1">&#39;github.com&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOPROXY</span><span class="o">=</span><span class="s1">&#39;https://goproxy.cn,direct&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOROOT</span><span class="o">=</span><span class="s1">&#39;/home/go/root/go&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOSUMDB</span><span class="o">=</span><span class="s1">&#39;sum.golang.org&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOTMPDIR</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOTOOLCHAIN</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOTOOLDIR</span><span class="o">=</span><span class="s1">&#39;/home/go/root/go/pkg/tool/linux_amd64&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOVCS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOVERSION</span><span class="o">=</span><span class="s1">&#39;go1.22.2&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GCCGO</span><span class="o">=</span><span class="s1">&#39;gccgo&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOAMD64</span><span class="o">=</span><span class="s1">&#39;v1&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">AR</span><span class="o">=</span><span class="s1">&#39;ar&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CC</span><span class="o">=</span><span class="s1">&#39;gcc&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CXX</span><span class="o">=</span><span class="s1">&#39;g++&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="s1">&#39;1&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOMOD</span><span class="o">=</span><span class="s1">&#39;/dev/null&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOWORK</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CGO_CFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CGO_CPPFLAGS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CGO_CXXFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CGO_FFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">CGO_LDFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">PKG_CONFIG</span><span class="o">=</span><span class="s1">&#39;pkg-config&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">GOGCCFLAGS</span><span class="o">=</span><span class="s1">&#39;-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2638198603=/tmp/go-build -gno-record-gcc-switches&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># ansible-playbook -i ./hosts.yml ./install_docker.yml</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PLAY <span class="o">[</span>dev<span class="o">]</span> ***************************************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>Gathering Facts<span class="o">]</span> ***************************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl"><span class="o">[</span>WARNING<span class="o">]</span>: Platform linux on host 192.168.50.130 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of another Python interpreter could change the meaning of that
+</span></span><span class="line"><span class="cl">path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html <span class="k">for</span> more information.
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : include_tasks<span class="o">]</span> ***************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">skipping: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : include_tasks<span class="o">]</span> ***************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">skipping: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : include_tasks<span class="o">]</span> ***************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">included: /root/dev-test/ansible-docker/roles/init_system/tasks/docker.yml <span class="k">for</span> 192.168.50.130
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : include_tasks<span class="o">]</span> ***************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">skipping: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : include_tasks<span class="o">]</span> ***************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">included: /root/dev-test/ansible-docker/roles/init_system/tasks/docker_ubuntu.yml <span class="k">for</span> 192.168.50.130
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 检查 SELinux 配置文件是否存在<span class="o">]</span> ***********************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 配置文件禁用SELinux<span class="o">]</span> *********************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">skipping: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 立即禁用SELinux<span class="o">]</span> *************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">skipping: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 安装一些依赖包<span class="o">]</span> **************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>apt-transport-https<span class="o">)</span>
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>ca-certificates<span class="o">)</span>
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>curl<span class="o">)</span>
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>gnupg-agent<span class="o">)</span>
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>software-properties-common<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 添加Docker GPG key<span class="o">]</span> **********************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 添加Docker APT仓库<span class="o">]</span> **********************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">changed: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 安装docker及containerd<span class="o">]</span> ******************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">changed: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>containerd.io<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">changed: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>docker-ce-cli<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">changed: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">(</span><span class="nv">item</span><span class="o">=</span>docker-ce<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 二进制安装docker-compose<span class="o">]</span> ****************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">changed: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 验证docker版本<span class="o">]</span> **************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 验证docker-compose版本<span class="o">]</span> ******************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : Docker version<span class="o">]</span> **************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;docker_version_output.stdout&#34;</span>: <span class="s2">&#34;Docker version 28.0.1, build 068a01e&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : Docker-Compose version<span class="o">]</span> ******************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;docker_compose_version_output.stdout&#34;</span>: <span class="s2">&#34;Docker Compose version v2.33.1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 创建目录/etc/docker/<span class="o">]</span> ********************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 拷贝docker配置daemon.json<span class="o">]</span> ***************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 取消journald作为Docker日志引擎<span class="o">]</span> **********************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">ok: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">TASK <span class="o">[</span>init_system : 启动Docker守护进程并让它关机重启也生效<span class="o">]</span> **************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">changed: <span class="o">[</span>192.168.50.130<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PLAY RECAP ***************************************************************************************************************************************************************************************************
+</span></span><span class="line"><span class="cl">192.168.50.130             : <span class="nv">ok</span><span class="o">=</span><span class="m">17</span>   <span class="nv">changed</span><span class="o">=</span><span class="m">1</span>    <span class="nv">unreachable</span><span class="o">=</span><span class="m">0</span>    <span class="nv">failed</span><span class="o">=</span><span class="m">0</span>    <span class="nv">skipped</span><span class="o">=</span><span class="m">5</span>    <span class="nv">rescued</span><span class="o">=</span><span class="m">0</span>    <span class="nv">ignored</span><span class="o">=</span><span class="m">0</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="环境测试">环境测试</h2>
-<p>首先在工作空间中创建源代码目录：</p>
-<pre tabindex="0"><code>$ cd $HOME/gowork
-</code></pre><p>然后在该目录下创建hello.go文件</p>
-<pre tabindex="0"><code>$ vim hello.go
-</code></pre><p>输入以下程序：</p>
-<pre tabindex="0"><code>package main
-
-import &#34;fmt&#34;
-
-func main() {
-    fmt.Printf(&#34;hello, world\n&#34;)
-}
-</code></pre><p>然后用<code>go run</code>运行</p>
-<pre tabindex="0"><code>$ go run hello.go
-</code></pre><p>输出<code>hello, world</code>，运行成功。</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://go.dev/dl/">https://go.dev/dl/</a></li>
-</ul>
-
+</div>
             </div>
             
                 <div class="tags">
@@ -407,23 +482,13 @@ func main() {
                     
     
         
-        <a href="https://hujian.xyz/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" class="pre">
+        <a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/" class="pre pre-last" style="text-align: center;">
             <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
             <div class="pre-title-root">
-                <span>gcc windows环境安装(目前13.2版本)</span>
+                <span>ubuntu2404手动安装docker</span>
             </div>
         </a>
         
-
-        
-        <a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="next">
-            <div class="next-title-root">
-                <span>Centos7.x配置Go开发环境</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
     
     
 
@@ -535,6 +600,29 @@ func main() {
     </div>
     <div class="list">
         
+            <a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/">
+                
+<a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                ubuntu2404手动安装docker
+            </div>
+            <div class="other-summary">ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
+查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
+sudo snap remove &ndash;purge docker 二 安装步骤： sudo apt-get update
+sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download.</div>
+            <div class="other-date">2025-3-18</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
             <a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
                 
 <a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
@@ -562,9 +650,9 @@ $ vim /etc/profile 加入以下内容：
 </a>
             </a>
         
-            <a href="https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/">
+            <a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
                 
-<a href="https://hujian.xyz/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/">
+<a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -573,36 +661,18 @@ $ vim /etc/profile 加入以下内容：
         </div>
         <div class="list-right">
             <div class="other-title">
-                ansible自动化安装docker
+                ubuntu 22.04 安装go
             </div>
-            <div class="other-summary">ansible自动化安装docker.md 本地软件准备 支持linux/macOS上运行。
-1. 环境依赖： 依赖 python3-pip，
-安装ansible ，以ubuntu2204为例 sudo apt update# 更新python版本sudo apt install python3-pip -y# 安装ansiblesudo apt install ansible# 验证 pip 是否安装成功：python3 -m pip --versionpip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10) 2. 脚本下载 ansible-install-docker 快速安装docker 1.在hosts.yml中添加要部署的ssh登录信息/服务器内外网IP地址，比如:
-1 2 3 4 5 6 7 8 9 dev: #这个命名在1中被引用 hosts: 192.</div>
-            <div class="other-date">2025-3-18</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/">
-                
-<a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                ubuntu2404手动安装docker
-            </div>
-            <div class="other-summary">ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
-查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
-sudo snap remove &ndash;purge docker 二 安装步骤： sudo apt-get update
-sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download.</div>
-            <div class="other-date">2025-3-18</div>
+            <div class="other-summary">ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;&amp; apt-get upgrade -y 环境安装 mkdir ~/go
+cd ~/go
+wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
+tar -C /usr/local go1.22.2.linux-amd64.tar.gz
+设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
+bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
+$ mkdir $HOME/gowork 在配置文件中添加环境变量
+$ vim /etc/profile 加入以下内容：
+export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&#34;github.com&#34;export GONOPROXY=&#34;github.com&#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&#34;github.</div>
+            <div class="other-date">2024-4-21</div>
         </div>
     </div>
 </a>
