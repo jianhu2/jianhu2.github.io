@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Aug 2024 16:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Mar 2025 11:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu2404手动安装docker</title>
+      <link>https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/</link>
+      <pubDate>Tue, 18 Mar 2025 11:19:04 +0800</pubDate>
+      
+      <guid>https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/</guid>
+      <description>ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
+查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
+sudo snap remove &amp;ndash;purge docker 二 安装步骤： sudo apt-get update
+sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download.</description>
+    </item>
+    
     <item>
       <title>小米路由器开发板</title>
       <link>https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/</link>

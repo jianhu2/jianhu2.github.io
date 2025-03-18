@@ -3,41 +3,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>深海映星辰 | Centos7.x配置Go开发环境</title>
-    <meta name="description" content="Centos7.x配置Go开发环境 安装golang 准备环境
-$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
-$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz https://studygolang.com/dl下载最新的源码包编译
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 然后在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-# Golangexport GO111MODULE=onexport GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOCACHE=/tmp/gocacheexport GONOSUMDB=&#34;github. ">
-    <link rel="canonical" href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
+    <title>深海映星辰 | ubuntu2404手动安装docker</title>
+    <meta name="description" content="ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
+查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
+sudo snap remove &ndash;purge docker 二 安装步骤： sudo apt-get update
+sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download. ">
+    <link rel="canonical" href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Centos7.x配置Go开发环境" />
-<meta property="og:description" content="Centos7.x配置Go开发环境 安装golang 准备环境
-$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
-$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz https://studygolang.com/dl下载最新的源码包编译
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 然后在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-# Golangexport GO111MODULE=onexport GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOCACHE=/tmp/gocacheexport GONOSUMDB=&#34;github." />
+    <meta property="og:title" content="ubuntu2404手动安装docker" />
+<meta property="og:description" content="ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
+查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
+sudo snap remove &ndash;purge docker 二 安装步骤： sudo apt-get update
+sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-21T16:19:04+08:00" />
-<meta property="article:modified_time" content="2024-04-21T00:00:00+00:00" />
+<meta property="og:url" content="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-03-18T11:19:04+08:00" />
+<meta property="article:modified_time" content="2025-03-18T00:00:00+00:00" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Centos7.x配置Go开发环境"/>
-<meta name="twitter:description" content="Centos7.x配置Go开发环境 安装golang 准备环境
-$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
-$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz https://studygolang.com/dl下载最新的源码包编译
-设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
-bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
-$ mkdir $HOME/gowork 然后在配置文件中添加环境变量
-$ vim /etc/profile 加入以下内容：
-# Golangexport GO111MODULE=onexport GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOCACHE=/tmp/gocacheexport GONOSUMDB=&#34;github."/>
+<meta name="twitter:title" content="ubuntu2404手动安装docker"/>
+<meta name="twitter:description" content="ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
+查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
+sudo snap remove &ndash;purge docker 二 安装步骤： sudo apt-get update
+sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download."/>
 
     
         
@@ -190,18 +178,18 @@ $ vim /etc/profile 加入以下内容：
             </div>
         
         <div class="hero-content">
-            <div class="hero-title">Centos7.x配置Go开发环境</div>
+            <div class="hero-title">ubuntu2404手动安装docker</div>
             <div class="hero-subtitle"></div>
             <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2024-4-21 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2024-4-21 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2025-3-18 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2025-3-18 &nbsp;</span>
                     <span class="no-wrap"><i class="fa fa-folder"></i>
                         未收录
                         
                     </span>    
             </div>
             <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 159 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 142 &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-clock-o"></i> 阅读时间: 1 分钟 &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-eye"></i> 阅读量: <span id="busuanzi_value_page_pv"></span></span>
             </div>
@@ -238,104 +226,96 @@ $ vim /etc/profile 加入以下内容：
     
         <div class="content">
             <div class="content-self">
-                <h1 id="centos7x配置go开发环境">Centos7.x配置Go开发环境</h1>
-<h2 id="安装golang">安装golang</h2>
-<p>准备环境</p>
-<pre tabindex="0"><code>$ sudo yum update
-$ sudo yum install wget vim -y
-</code></pre><p>源码包编译安装（可下最新版本）：</p>
-<pre tabindex="0"><code>$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
-$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
-</code></pre><p><code>https://studygolang.com/dl</code>下载最新的源码包编译</p>
-<h2 id="设置环境变量">设置环境变量</h2>
-<p>Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：</p>
+                <h1 id="ubuntu手动安装dockermd">ubuntu手动安装docker.md</h1>
+<p>Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.</p>
+<h2 id="查看系统版本">查看系统版本：</h2>
+<pre tabindex="0"><code># lsb_release -a
+
+
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 24.04.1 LTS
+Release:        24.04
+Codename:       noble
+</code></pre><h2 id="一-安装前准备">一 安装前准备</h2>
+<p>强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。</p>
 <ul>
-<li>bin：包含编译后的可执行命令</li>
-<li>pkg：包含包对象</li>
-<li>src：包含Go的源文件，它们被组织成包</li>
+<li>sudo snap remove &ndash;purge docker</li>
 </ul>
-<p>因此首先创建go语言的工作空间：</p>
-<pre tabindex="0"><code>$ mkdir $HOME/gowork
-</code></pre><p>然后在配置文件中添加环境变量</p>
-<pre tabindex="0"><code>$ vim /etc/profile
-</code></pre><p>加入以下内容：</p>
-<pre tabindex="0"><code># Golang
-export GO111MODULE=on
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/gowork
-export GOCACHE=/tmp/gocache
-export GONOSUMDB=&#34;github.com&#34;
-export GONOPROXY=&#34;github.com&#34;
-export GOPRIVATE=&#34;github.com&#34;
-
-export PATH=$PATH:$GOROOT/bin保存后执行source使其生效：
-</code></pre><pre tabindex="0"><code>$ source /etc/profile
-</code></pre><p>安装完成后查看go版本以确认：</p>
-<pre tabindex="0"><code>$ go version
-</code></pre><p>若有版本输出则表示安装成功，如<code>go version go1.22.2 linux/amd64</code></p>
-<p>之后执行<code>go env</code>来检查环境变量是否配置成功：</p>
-<pre tabindex="0"><code>GO111MODULE=&#39;on&#39;
-GOARCH=&#39;amd64&#39;
-GOBIN=&#39;&#39;
-GOCACHE=&#39;/tmp/gocache&#39;
-GOENV=&#39;/root/.config/go/env&#39;
-GOEXE=&#39;&#39;
-GOEXPERIMENT=&#39;&#39;
-GOFLAGS=&#39;&#39;
-GOHOSTARCH=&#39;amd64&#39;
-GOHOSTOS=&#39;linux&#39;
-GOINSECURE=&#39;&#39;
-GOMODCACHE=&#39;/home/go/path/pkg/mod&#39;
-GONOPROXY=&#39;github.com&#39;
-GONOSUMDB=&#39;github.com&#39;
-GOOS=&#39;linux&#39;
-GOPATH=&#39;/home/go/path&#39;
-GOPRIVATE=&#39;github.com&#39;
-GOPROXY=&#39;https://goproxy.cn,direct&#39;
-GOROOT=&#39;/home/go/root/go&#39;
-GOSUMDB=&#39;sum.golang.org&#39;
-GOTMPDIR=&#39;&#39;
-GOTOOLCHAIN=&#39;auto&#39;
-GOTOOLDIR=&#39;/home/go/root/go/pkg/tool/linux_amd64&#39;
-GOVCS=&#39;&#39;
-GOVERSION=&#39;go1.22.2&#39;
-GCCGO=&#39;gccgo&#39;
-GOAMD64=&#39;v1&#39;
-AR=&#39;ar&#39;
-CC=&#39;gcc&#39;
-CXX=&#39;g++&#39;
-CGO_ENABLED=&#39;1&#39;
-GOMOD=&#39;/dev/null&#39;
-GOWORK=&#39;&#39;
-CGO_CFLAGS=&#39;-O2 -g&#39;
-CGO_CPPFLAGS=&#39;&#39;
-CGO_CXXFLAGS=&#39;-O2 -g&#39;
-CGO_FFLAGS=&#39;-O2 -g&#39;
-CGO_LDFLAGS=&#39;-O2 -g&#39;
-PKG_CONFIG=&#39;pkg-config&#39;
-GOGCCFLAGS=&#39;-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build518993520=/tmp/go-build -gno-record-gcc-switches&#39;
-</code></pre><p>可以看到GOPATH以及变为我们设置的值，也可以执行<code>cd $GOPATH</code>看是否进入对应的文件夹来验证是否配置成功。</p>
-<p>设置使用git方式拉取私人仓库</p>
-<pre tabindex="0"><code> git config --global url.&#34;git@github.com:&#34;.insteadOf &#34;https://github.com/&#34;
-</code></pre><h2 id="环境测试">环境测试</h2>
-<p>首先在工作空间中创建源代码目录：</p>
-<pre tabindex="0"><code>$ cd $HOME/gowork
-</code></pre><p>然后在该目录下创建hello.go文件</p>
-<pre tabindex="0"><code>$ vim hello.go
-</code></pre><p>输入以下程序：</p>
-<pre tabindex="0"><code>package main
-
-import &#34;fmt&#34;
-
-func main() {
-    fmt.Printf(&#34;hello, world\n&#34;)
-}
-</code></pre><p>然后用<code>go run</code>运行</p>
-<pre tabindex="0"><code>$ go run hello.go
-</code></pre><p>输出<code>hello, world</code>，运行成功。</p>
-<p>参考：</p>
+<h2 id="二-安装步骤">二 安装步骤：</h2>
+<ol>
+<li>
+<p><code>sudo apt-get update</code></p>
+</li>
+<li>
+<pre tabindex="0"><code>sudo apt-get install \
+apt-transport-https \
+ca-certificates \
+curl \
+gnupg-agent \
+software-properties-common
+</code></pre></li>
+<li>
+<p><code> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+</li>
+<li>
+<p><code> sudo apt-key fingerprint 0EBFCD88</code></p>
+</li>
+<li>
+<pre tabindex="0"><code>sudo add-apt-repository \
+&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable&#34; 
+</code></pre></li>
+<li>
+<p><code>sudo apt-get update</code></p>
+</li>
+<li>
+<p><code> apt-cache madison docker-ce</code></p>
+</li>
+<li>
+<p>安装指定docker版本：
+sudo apt-get install docker-ce=版本 docker-ce-cli=版本 containerd.io 示例如下：</p>
 <ul>
-<li><a href="https://go.dev/dl/">https://go.dev/dl/</a></li>
+<li><code>sudo apt-get install docker-ce=5:28.0.1-1~ubuntu.22.04~jammy docker-ce-cli=5:28.0.1-1~ubuntu.22.04~jammy containerd.io</code></li>
+</ul>
+</li>
+<li>
+<p><code> docker --version</code>
+10 <code> docker-compose --version</code></p>
+</li>
+<li>
+<p>安装docker-compose:</p>
+</li>
+</ol>
+<ul>
+<li><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></li>
+</ul>
+<h2 id="三-配置镜像源">三 配置镜像源：</h2>
+<pre tabindex="0"><code>sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39;
+{
+
+	&#34;log-driver&#34;: &#34;json-file&#34;,
+	&#34;log-opts&#34;: {
+		&#34;max-size&#34;: &#34;512m&#34;,
+		&#34;max-file&#34;: &#34;3&#34;
+	} ,
+
+    &#34;registry-mirrors&#34;: [
+    	&#34;https://docker-0.unsee.tech&#34;,
+        &#34;https://docker-cf.registry.cyou&#34;,
+        &#34;https://docker.1panel.live&#34;
+    ]
+}
+EOF
+</code></pre><h2 id="四-参考文档">四 参考文档</h2>
+<h3 id="ubuntu安装docker">ubuntu安装docker：</h3>
+<ul>
+<li><a href="https://blog.csdn.net/qq_27348837/article/details/105699475">https://blog.csdn.net/qq_27348837/article/details/105699475</a></li>
+</ul>
+<h3 id="配置镜像源参考">配置镜像源参考：</h3>
+<ul>
+<li><a href="https://www.coderjia.cn/archives/dba3f94c-a021-468a-8ac6-e840f85867ea">https://www.coderjia.cn/archives/dba3f94c-a021-468a-8ac6-e840f85867ea</a></li>
 </ul>
 
             </div>
@@ -361,23 +341,13 @@ func main() {
                     
     
         
-        <a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="pre">
+        <a href="https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/" class="pre pre-last" style="text-align: center;">
             <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
             <div class="pre-title-root">
-                <span>ubuntu 22.04 安装go</span>
-            </div>
-        </a>
-        
-
-        
-        <a href="https://hujian.xyz/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/" class="next">
-            <div class="next-title-root">
                 <span>小米路由器开发板</span>
             </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
         </a>
         
-
     
     
 
@@ -489,6 +459,33 @@ func main() {
     </div>
     <div class="list">
         
+            <a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+                
+<a href="https://hujian.xyz/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                Centos7.x配置Go开发环境
+            </div>
+            <div class="other-summary">Centos7.x配置Go开发环境 安装golang 准备环境
+$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
+$ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz$ sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz https://studygolang.com/dl下载最新的源码包编译
+设置环境变量 Go代码必须放在工作空间中，实际上就是一个目录，且必须包含src、pkg、bin三个子目录。它们的用途如下：
+bin：包含编译后的可执行命令 pkg：包含包对象 src：包含Go的源文件，它们被组织成包 因此首先创建go语言的工作空间：
+$ mkdir $HOME/gowork 然后在配置文件中添加环境变量
+$ vim /etc/profile 加入以下内容：
+# Golangexport GO111MODULE=onexport GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOCACHE=/tmp/gocacheexport GONOSUMDB=&#34;github.</div>
+            <div class="other-date">2024-4-21</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
             <a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
                 
 <a href="https://hujian.xyz/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
@@ -512,29 +509,6 @@ $ mkdir $HOME/gowork 在配置文件中添加环境变量
 $ vim /etc/profile 加入以下内容：
 export GOROOT=/usr/local/goexport GOPATH=$HOME/goworkexport GOBIN=$GOPATH/binexport PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATHexport GONOSUMDB=&#34;github.com&#34;export GONOPROXY=&#34;github.com&#34;export GOPROXY=https://goproxy.cn,directexport GOPRIVATE=&#34;github.</div>
             <div class="other-date">2024-4-21</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/">
-                
-<a href="https://hujian.xyz/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                ubuntu2404手动安装docker
-            </div>
-            <div class="other-summary">ubuntu手动安装docker.md Ubuntu 24.04.1 LTS 安装docekr-compose docker; 非snap 安装.
-查看系统版本： # lsb_release -aNo LSB modules are available.Distributor ID: UbuntuDescription: Ubuntu 24.04.1 LTSRelease: 24.04Codename: noble 一 安装前准备 强制删除snap安装的docekr，如果没有使用snap安装过docker请跳过。
-sudo snap remove &ndash;purge docker 二 安装步骤： sudo apt-get update
-sudo apt-get install \apt-transport-https \ca-certificates \curl \gnupg-agent \software-properties-common curl -fsSL https://download.</div>
-            <div class="other-date">2025-3-18</div>
         </div>
     </div>
 </a>
