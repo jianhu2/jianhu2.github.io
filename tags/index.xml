@@ -2,89 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 深海映星辰</title>
-    <link>https://hujian.xyz/tags/</link>
+    <link>https://blog.hujian.xyz/tags/</link>
     <description>Recent content in Tags on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Mar 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Mar 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://blog.hujian.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>windows</title>
-      <link>https://hujian.xyz/tags/windows/</link>
+      <link>https://blog.hujian.xyz/tags/windows/</link>
       <pubDate>Mon, 24 Mar 2025 20:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/windows/</guid>
+      <guid>https://blog.hujian.xyz/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://hujian.xyz/tags/linux/</link>
+      <link>https://blog.hujian.xyz/tags/linux/</link>
       <pubDate>Tue, 18 Mar 2025 15:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/linux/</guid>
+      <guid>https://blog.hujian.xyz/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>website</title>
-      <link>https://hujian.xyz/tags/website/</link>
+      <link>https://blog.hujian.xyz/tags/website/</link>
       <pubDate>Wed, 21 Aug 2024 16:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/website/</guid>
+      <guid>https://blog.hujian.xyz/tags/website/</guid>
       <description></description>
     </item>
     
     <item>
       <title>开发环境</title>
-      <link>https://hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+      <link>https://blog.hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Thu, 02 Nov 2023 10:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+      <guid>https://blog.hujian.xyz/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nginx</title>
-      <link>https://hujian.xyz/tags/nginx/</link>
+      <link>https://blog.hujian.xyz/tags/nginx/</link>
       <pubDate>Tue, 25 Jul 2023 10:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/nginx/</guid>
+      <guid>https://blog.hujian.xyz/tags/nginx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IDE</title>
-      <link>https://hujian.xyz/tags/ide/</link>
+      <link>https://blog.hujian.xyz/tags/ide/</link>
       <pubDate>Fri, 21 Jul 2023 16:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/ide/</guid>
+      <guid>https://blog.hujian.xyz/tags/ide/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://hujian.xyz/tags/docker/</link>
+      <link>https://blog.hujian.xyz/tags/docker/</link>
       <pubDate>Wed, 10 May 2023 16:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/docker/</guid>
+      <guid>https://blog.hujian.xyz/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>k8s</title>
-      <link>https://hujian.xyz/tags/k8s/</link>
+      <link>https://blog.hujian.xyz/tags/k8s/</link>
       <pubDate>Wed, 10 May 2023 16:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/k8s/</guid>
+      <guid>https://blog.hujian.xyz/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssh</title>
-      <link>https://hujian.xyz/tags/ssh/</link>
+      <link>https://blog.hujian.xyz/tags/ssh/</link>
       <pubDate>Wed, 10 Mar 2021 16:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/tags/ssh/</guid>
+      <guid>https://blog.hujian.xyz/tags/ssh/</guid>
       <description></description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nginx on 深海映星辰</title>
-    <link>https://hujian.xyz/tags/nginx/</link>
+    <link>https://blog.hujian.xyz/tags/nginx/</link>
     <description>Recent content in nginx on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Jul 2023 10:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Jul 2023 10:19:04 +0800</lastBuildDate><atom:link href="https://blog.hujian.xyz/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nginx 301跳转问题总结</title>
-      <link>https://hujian.xyz/posts/nginx-301%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
+      <link>https://blog.hujian.xyz/posts/nginx-301%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 25 Jul 2023 10:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/posts/nginx-301%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://blog.hujian.xyz/posts/nginx-301%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</guid>
       <description>1.nginx 301跳转问题背景 在使用hugo部署博客，部署方案nginx+docker,在浏览器地址使用url访问静态资源目录时，发现默认跳转到了http协议的地址。 调出浏览器发现客户端发送的http请求收到了一个301状态码的响应，并且响应头中的Location字段便是跳转到的http协议的地址。 2.原因分析 为啥服务端会返回301呢？首先需要弄清楚状态码的含义。HTTP协议中3xx开头的状态响应码都是表示重定向的响应。根据RFC的定义：
 301 Moved Permanently
 302 Found

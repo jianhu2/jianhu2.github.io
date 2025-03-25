@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on 深海映星辰</title>
-    <link>https://hujian.xyz/tags/windows/</link>
+    <link>https://blog.hujian.xyz/tags/windows/</link>
     <description>Recent content in windows on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Mar 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://hujian.xyz/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Mar 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://blog.hujian.xyz/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>实用软件插件分享</title>
-      <link>https://hujian.xyz/posts/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</link>
+      <link>https://blog.hujian.xyz/posts/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</link>
       <pubDate>Mon, 24 Mar 2025 20:19:04 +0800</pubDate>
       
-      <guid>https://hujian.xyz/posts/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://blog.hujian.xyz/posts/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</guid>
       <description>实用软件/插件分享 软件类： uTools：一个极简、插件化的现代桌面软件 本地搜索：基于everything的文件搜索及预览 聚合翻译：聚合了多种在线翻译 小工具：json文件序列化，C++函数速查，文本代码比较等等。 编码小助手：时间戳，base64编码解码，哈希加密，进制转换等等。 颜色助手：提取颜色 chrome小助手：chrome书签搜索 官网地址 https://www.u-tools.cn/ ApowerREC（破解版）：录屏软件 下载地址 https://github.com/cappuccino5/share-tools 官网地址 https://www.apowersoft.cn/record-all-screen 效果示例
 chrome插件类： git master：为github、gitlab、gitee网站提供树形展示。 SmartProxy/SwitchyOmega google游览器选择性的代理流量。 Chrome 插件安装链接 订阅规则列表，配置白名单。 导入规则，复制规则连接地址的内容。 https://raw.githubusercontent.com/boy86001/SmartProxy-Tools/main/gfwlist.txt 导入beta 3. 参考连接。 1. https://github.com/boy86001/SmartProxy-Tools/blob/main/README-cn.md </description>
     </item>
