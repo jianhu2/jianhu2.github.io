@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Mar 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://blog.hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://blog.hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代理客户端安装</title>
+      <link>https://blog.hujian.xyz/posts/%E4%BB%A3%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Thu, 17 Jul 2025 20:19:04 +0800</pubDate>
+      
+      <guid>https://blog.hujian.xyz/posts/%E4%BB%A3%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
+      <description>1.代理客户端安装 不同环境下的安装方式 1.1 windows电脑安装 1 https://github.com/kelleygo/shadowsocks/releases/download/1.3.2/shadowsocks-windows-amd64.zip 1.2 android-app安装 1 2 3 4 5 // shadowsocks https://github.com/kelleygo/shadowsocks/releases/download/1.3.2/shadowsocks.android-app.apk // v2ray-plugin https://github.com/kelleygo/shadowsocks/releases/download/1.3.2/v2ray-x86-1.3.3.apk 如果安装v2ray-plugin插件报错该应用与此设备的 CPU 不兼容，尝试安装1.3.2版本 1 https://github.com/kelleygo/shadowsocks/releases/download/1.3.2/shadowsocks.plugin.v2ray-android.1.3.2.apk 如果安装v2ray-plugin插件报错还报错，到github找不同的版本安装 1 https://github.com/shadowsocks/v2ray-plugin-android/releases 1.3 ubuntu桌面版安装 linux客户端安装基于Docker运行，需要先安装Docker和docker-compose；
+https://github.com/kelleygo/shadowsocks/releases/download/1.3.2/shadowsocks&amp;ndash;client-linux.zip 1.4 Mac 安装 参考官方文档
+https://shadowsockshelp.github.io/Shadowsocks/mac.html 2. 配置 2.1 Windows配置游览器代理 安装Chrome浏览器, 如已经安装请跳过 Chrome浏览器地址栏输入chrome://extensions/, 开启开发者模式. 拖动SwitchyOmega-xxx.crx至chrome://extensions/页面
+如出现 CRX_HEADER_INVALID 错误，则拖动 SwitchyOmega-xxx.zip 文件安装 点击Chrome浏览器左上角SwitchyOmega图标, 再点击选项 点击&amp;quot;导入/导出&amp;quot;, 点击&amp;quot;从文件恢复&amp;quot;, 选择&amp;quot;OmegaOptions-20180124.</description>
+    </item>
+    
     <item>
       <title>实用软件插件分享</title>
       <link>https://blog.hujian.xyz/posts/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</link>
