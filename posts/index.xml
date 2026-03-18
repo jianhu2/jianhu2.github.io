@@ -6,7 +6,29 @@
     <description>Recent content in Posts on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jul 2025 20:19:04 +0800</lastBuildDate><atom:link href="https://blog.hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Agent OpenClaw 架构与工作原理</title>
+      <link>https://blog.hujian.xyz/posts/openclaw-%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.hujian.xyz/posts/openclaw-%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</guid>
+      <description>技术分享 · Agent 架构 · Tool Use 机制 · LLM
+1. OpenClaw 架构 消息从 Channels 进入 Agent Runtime，由 Planner 驱动循环，Tools / Memory / LLM 均由 Planner 主动调用。
+组件对照表 模块 OpenClaw 组件 职责 Channels Feishu / Telegram / CLI / UI 消息入口，接收用户指令并返回结果 Agent Runtime gateway 核心代理 启动 Planner，监听任务完成信号，将最终结果写回 Channel Planner Agent Loop 的具体实现 规划任务步骤，驱动&amp;quot;LLM → tool_use → 执行 → 观察&amp;quot;循环 Tools exec / http / fs 实际执行动作的原子能力 Memory workspace 维护对话历史、tool_result，是两轮对话之间的纽带 LLM 模型 provider（kimi 等） 推理与决策引擎，被 Planner 主动调用，只做推理不做执行 注意：Planner 实现了 Agent Loop，Agent Loop 是 Planner 的运行机制。Tools 和 LLM 都由 Planner 在循环中主动调用，不由 Agent Runtime 直接驱动。</description>
+    </item>
+    
+    <item>
+      <title>AI 学习指北</title>
+      <link>https://blog.hujian.xyz/posts/ai-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8C%97/</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.hujian.xyz/posts/ai-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8C%97/</guid>
+      <description>Last news 大模型 2024-25 年发展了哪些方面 2025 年上半年AI使用情况和趋势 2025 China AI 现状 2026 Agent 智能体 名词解释 LLM（Large Language Model，大语言模型） 定义 LLM 是基于海量文本数据训练的深度学习模型，能够理解、生成和推理人类语言，通过预测文本序列的概率分布实现智能交互。
+RAG（Retrieval-Augmented Generation，检索增强生成） 定义 RAG 是一种将实时信息检索与大语言模型结合的架构，通过从外部知识库动态提取相关数据，增强LLM生成答案的准确性和时效性。
+RAG 的典型工作流 用户输入问题。 将问题向量化，然后检索最相似的文档切片。 将检索到的上下文与问题拼接后输入 LLM。 LLM 输出带引用信息的回答。 前端渲染回答、可选地在可视化界面中展示引用详情。 RAG和LLM区别： RAG 不是新模型，而是LLM的增强框架。 LLM是RAG的生成引擎，检索系统是RAG的知识补给站。 术语 本质 解决痛点 是否可独立存在 LLM 通用语言智能体 自动化文本生成与理解 是 RAG LLM的“扩展知识站” 突破静态知识边界+减少幻觉 否（依赖LLM） MCP（Model Context Protocol） Model Context Protocol (MCP) 是由 Anthropic 开发的开放标准协议，为 AI 与外部工具和数据源提供标准化交互接口。AI 通过此协议访问软件工具和数据资源。</description>
+    </item>
+    
     <item>
       <title>代理客户端安装</title>
       <link>https://blog.hujian.xyz/posts/%E4%BB%A3%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
