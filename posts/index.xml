@@ -6,11 +6,11 @@
     <description>Recent content in Posts on 深海映星辰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hujian.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Agent OpenClaw 架构与工作原理</title>
       <link>https://blog.hujian.xyz/posts/openclaw-%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</link>
-      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
       
       <guid>https://blog.hujian.xyz/posts/openclaw-%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</guid>
       <description>技术分享 · Agent 架构 · Tool Use 机制 · LLM
@@ -21,7 +21,7 @@
     <item>
       <title>AI 学习指北</title>
       <link>https://blog.hujian.xyz/posts/ai-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8C%97/</link>
-      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
       
       <guid>https://blog.hujian.xyz/posts/ai-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8C%97/</guid>
       <description>Last news 大模型 2024-25 年发展了哪些方面 2025 年上半年AI使用情况和趋势 2025 China AI 现状 2026 Agent 智能体 名词解释 LLM（Large Language Model，大语言模型） 定义 LLM 是基于海量文本数据训练的深度学习模型，能够理解、生成和推理人类语言，通过预测文本序列的概率分布实现智能交互。
