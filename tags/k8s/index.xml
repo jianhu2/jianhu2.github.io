@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>k8s on 深海映星辰</title>
+    <title>K8s on 深海映星辰</title>
     <link>https://jianhu.cc/tags/k8s/</link>
-    <description>Recent content in k8s on 深海映星辰</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 10 May 2023 16:19:04 +0800</lastBuildDate><atom:link href="https://jianhu.cc/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in K8s on 深海映星辰</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jianhu.cc/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kubernetes常用命令</title>
       <link>https://jianhu.cc/posts/kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Wed, 10 May 2023 16:19:04 +0800</pubDate>
-      
       <guid>https://jianhu.cc/posts/kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>1. 将service端口暴露到本地 比如将生产环境的redis暴露到本地6379端口
-1 kubectl port-forward service/redis -n [namesplace] 6379:6379 2. 进入容器中 kubectl exec -it [pod] -n [namesplace] -- bash 3. 查看日志 查看最后1行的日志
-kubectl logs -f --tail 1 [pod] -n [namesplace] 查看最后一分钟的所有日志
-kubectl -n [namesplace] logs [pod] --since=1m 查看指定时间
-kubectl -n -n [namesplace] logs -f [pod] --since-time=&amp;#34;2022-10-24T02:54:03.467+01:00&amp;#34; 4. 查看配置： kubectl get pod product-6b5c98478b-rpgr6 --namespace=product-prod -o yamlkubectl describe pods product-6b5c98478b-rpgr6 --namespace=product-prod 5.</description>
+      <description>&lt;h1 id=&#34;1-将service端口暴露到本地&#34;&gt;1. 将service端口暴露到本地&lt;/h1&gt;&#xA;&lt;p&gt;比如将生产环境的redis暴露到本地6379端口&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl port-forward service/redis -n &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;namesplace&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 6379:6379&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h1 id=&#34;2-进入容器中&#34;&gt;2. 进入容器中&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kubectl exec -it [pod]  -n [namesplace]  -- bash &#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;3-查看日志&#34;&gt;3. 查看日志&lt;/h1&gt;&#xA;&lt;p&gt;查看最后1行的日志&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; kubectl logs -f --tail 1 [pod] -n [namesplace]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查看最后一分钟的所有日志&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kubectl -n [namesplace] logs [pod] --since=1m&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;查看指定时间&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kubectl -n -n [namesplace] logs -f [pod] --since-time=&amp;#34;2022-10-24T02:54:03.467+01:00&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;4-查看配置&#34;&gt;4. 查看配置：&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kubectl get pod product-6b5c98478b-rpgr6 --namespace=product-prod -o yaml&#xD;&#xA;&#xD;&#xA;kubectl describe pods product-6b5c98478b-rpgr6 --namespace=product-prod&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;5-从pod复制文件到宿主机&#34;&gt;5. 从pod复制文件到宿主机&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl cp redis-test/redis-0:/data/* .&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h1 id=&#34;6-复制pod里的文件到宿主机&#34;&gt;6 复制pod里的文件到宿主机&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kubectl cp service-test/redis-0:/data/* .&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>
