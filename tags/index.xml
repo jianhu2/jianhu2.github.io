@@ -6,27 +6,27 @@
     <description>Recent content in Tags on 深海映星辰</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jianhu.cc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI</title>
-      <link>https://jianhu.cc/tags/ai/</link>
-      <pubDate>Tue, 17 Mar 2026 08:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/ai/</guid>
+      <title>Network</title>
+      <link>https://jianhu.cc/tags/network/</link>
+      <pubDate>Tue, 12 May 2026 10:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
       <link>https://jianhu.cc/tags/tools/</link>
-      <pubDate>Thu, 17 Jul 2025 20:19:04 +0800</pubDate>
+      <pubDate>Tue, 12 May 2026 10:00:00 +0800</pubDate>
       <guid>https://jianhu.cc/tags/tools/</guid>
       <description></description>
     </item>
     <item>
-      <title>Windows</title>
-      <link>https://jianhu.cc/tags/windows/</link>
-      <pubDate>Mon, 24 Mar 2025 20:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/windows/</guid>
+      <title>AI</title>
+      <link>https://jianhu.cc/tags/ai/</link>
+      <pubDate>Tue, 17 Mar 2026 08:19:04 +0800</pubDate>
+      <guid>https://jianhu.cc/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -37,59 +37,17 @@
       <description></description>
     </item>
     <item>
+      <title>Dev-Env</title>
+      <link>https://jianhu.cc/tags/dev-env/</link>
+      <pubDate>Sun, 21 Apr 2024 16:19:04 +0800</pubDate>
+      <guid>https://jianhu.cc/tags/dev-env/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Website</title>
       <link>https://jianhu.cc/tags/website/</link>
-      <pubDate>Wed, 21 Aug 2024 16:19:04 +0800</pubDate>
+      <pubDate>Sat, 21 May 2022 16:19:04 +0800</pubDate>
       <guid>https://jianhu.cc/tags/website/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>开发环境</title>
-      <link>https://jianhu.cc/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
-      <pubDate>Thu, 02 Nov 2023 10:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nginx</title>
-      <link>https://jianhu.cc/tags/nginx/</link>
-      <pubDate>Tue, 25 Jul 2023 10:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/nginx/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://jianhu.cc/tags/go/</link>
-      <pubDate>Fri, 21 Jul 2023 16:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>IDE</title>
-      <link>https://jianhu.cc/tags/ide/</link>
-      <pubDate>Fri, 21 Jul 2023 16:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/ide/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Docker</title>
-      <link>https://jianhu.cc/tags/docker/</link>
-      <pubDate>Wed, 10 May 2023 16:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/docker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>K8s</title>
-      <link>https://jianhu.cc/tags/k8s/</link>
-      <pubDate>Wed, 10 May 2023 16:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/k8s/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssh</title>
-      <link>https://jianhu.cc/tags/ssh/</link>
-      <pubDate>Wed, 10 Mar 2021 16:19:04 +0800</pubDate>
-      <guid>https://jianhu.cc/tags/ssh/</guid>
       <description></description>
     </item>
   </channel>

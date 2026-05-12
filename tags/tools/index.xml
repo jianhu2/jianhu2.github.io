@@ -6,8 +6,15 @@
     <description>Recent content in Tools on 深海映星辰</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jianhu.cc/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内网穿透与远程访问方案总结</title>
+      <link>https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 12 May 2026 10:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;h1 id=&#34;内网穿透与远程访问方案总结&#34;&gt;内网穿透与远程访问方案总结&lt;/h1&gt;&#xA;&lt;p&gt;整理一下常用的内网穿透 / 远程访问方案，按 “是否需要公网 IP / 协议范围 / 部署难度” 做了归类。文末是个人当前在用的组合和对比体感，给选型当个参考。&lt;/p&gt;&#xA;&lt;h2 id=&#34;tldr--当前在用zerotier--rdp&#34;&gt;TL;DR — 当前在用：ZeroTier + RDP&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;组网&lt;/strong&gt;：ZeroTier，自建 moon node&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;远程桌面&lt;/strong&gt;：直接走 Windows 原生 RDP（在 ZeroTier 虚拟网里，等同于同一局域网）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;核心结论&lt;/strong&gt;：在两端都接入同一&lt;strong&gt;自建节点&lt;/strong&gt;的前提下，ZeroTier 比 Tailscale 明显更流畅 —— 这是当前选 ZeroTier 的主要原因&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;下面按五类整理。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>代理客户端安装</title>
       <link>https://jianhu.cc/posts/%E4%BB%A3%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
@@ -21,6 +28,13 @@
       <pubDate>Mon, 24 Mar 2025 20:19:04 +0800</pubDate>
       <guid>https://jianhu.cc/posts/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</guid>
       <description>&lt;h1 id=&#34;开发者工具与社区资源清单&#34;&gt;开发者工具与社区资源清单&lt;/h1&gt;&#xA;&lt;h2 id=&#34;软件类&#34;&gt;软件类&lt;/h2&gt;&#xA;&lt;h3 id=&#34;utools&#34;&gt;uTools&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.u-tools.cn/download/&#34;&gt;uTools&lt;/a&gt; 是一款插件化的桌面效率工具，免费版可以安装使用 10 个插件。&lt;/p&gt;&#xA;&lt;p&gt;常用插件：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;本地搜索：基于 Everything 的文件搜索及预览。&lt;/li&gt;&#xA;&lt;li&gt;聚合翻译：聚合多种在线翻译。&lt;/li&gt;&#xA;&lt;li&gt;小工具：JSON 格式化、C++ 函数速查、文本/代码比较等。&lt;/li&gt;&#xA;&lt;li&gt;编码小助手：时间戳、Base64 编解码、哈希加密、进制转换等。&lt;/li&gt;&#xA;&lt;li&gt;颜色助手：提取颜色。&lt;/li&gt;&#xA;&lt;li&gt;Chrome 小助手：Chrome 书签搜索。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;下载地址：&lt;a href=&#34;https://www.u-tools.cn/download/&#34;&gt;https://www.u-tools.cn/download/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>小米路由器开发板</title>
+      <link>https://jianhu.cc/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/</link>
+      <pubDate>Wed, 21 Aug 2024 16:19:04 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%8F%91%E6%9D%BF/</guid>
+      <description>&lt;h1 id=&#34;小米路由器开发板环境制作&#34;&gt;小米路由器开发板环境制作&lt;/h1&gt;&#xA;&lt;h2 id=&#34;准备条件&#34;&gt;准备条件&lt;/h2&gt;&#xA;&lt;p&gt;a.小米路由器型号要符合支持开发板，参考下图；&#xA;&lt;img src=&#34;../../static/images/%E6%94%AF%E6%8C%81%E7%9A%84%E5%9E%8B%E5%8F%B7.png&#34; alt=&#34;6d45a29018025db4cb83bfb05008e38.png&#34;&gt;&#xA;b.下载开发板固件（与路由器型号匹配）：选择下载&amp;gt;ROM&amp;gt;小米路由器3&#xA;下载小米路由器3 开发版（miwifi_r3_firmware_e9f31_2.27.120.bin）&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://miwifi.com/miwifi_download.html&#34;&gt;http://miwifi.com/miwifi_download.html&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;img src=&#34;https://camo.githubusercontent.com/7c83defd572f7dc1b5384e83359505c4833f740c5c7e0d1dc14510be27bbcd30/68747470733a2f2f63646e2e6e6c61726b2e636f6d2f79757175652f302f323032342f706e672f32363930393535312f313731363737363337343132362d32383963386464302d613638322d343435632d396434362d6137373232633436646664392e706e6723617665726167654875653d25323366646663666326636c69656e7449643d7562326530363238302d353531362d342666726f6d3d7061737465266865696768743d3137302669643d756237623732363163266f726967696e4865696768743d323132266f726967696e57696474683d393935266f726967696e616c547970653d62696e61727926726174696f3d312e323526726f746174696f6e3d302673686f775469746c653d66616c73652673697a653d3136333137267374617475733d646f6e65267374796c653d6e6f6e65267461736b49643d7534643932396664652d333738302d346562642d383433632d6436643532643030663639267469746c653d2677696474683d373936&#34; alt=&#34;image.png&#34;&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;升级固件&#34;&gt;升级固件&lt;/h2&gt;&#xA;&lt;h3 id=&#34;步骤一&#34;&gt;步骤一&lt;/h3&gt;&#xA;&lt;p&gt;路由器初始管理平台地址：&lt;a href=&#34;http://192.168.31.1/&#34;&gt;http://192.168.31.1&lt;/a&gt;。登陆小米路由器的web界面，进入后台。选择手动升级，上传开发版固件（miwifi_r3_firmware_e9f31_2.27.120.bin）点击升级，等待5分钟左右就会自动升级完成。wifi的ssid和密码仍然保持不变。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,88 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn"><head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><title>深海映星辰 | ubuntu宿主机部署ss-local客户端</title>
-    <meta name="description" content="shadowsocks-libev基于ubuntu宿主机部署ss-local客户端.md
-1. 安装
-1.1 准备环境：
-
-Linux ubuntu 6.2.0-20-generic ubuntu  2023-04 amd64
-基于ubuntu宿主机安装 shadowsocks-libev和v2ray-plugin
-
-1.2  安装shadowsocks-libev：
- sudo apt install shadowsocks-libev
-
-1.3   安装v2ray-plugin
-
-
-1
-2
-3
-4
-
-
-wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz
-tar -zxvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz     
-mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
-chmod  775 /usr/bin/v2ray-plugin
-
-
-1.3 配置shadowsocks-libev配置文件
-vi /etc/shadowsocks-libev/config.json
-
-{
-&#34;server&#34;: &#34;domain.com&#34;,
-&#34;server_port&#34;: 443,
-&#34;password&#34;: &#34;password&#34;,
-&#34;method&#34;: &#34;aes-128-gcm&#34;,
-&#34;local_address&#34;: &#34;0.0.0.0&#34;,
-&#34;local_port&#34;: 1080,
-&#34;plugin&#34;: &#34;/usr/bin/v2ray-plugin&#34;,
-&#34;plugin_opts&#34;: &#34;tls;host=domain.com;path=/&#34;,
-&#34;plugin_args&#34;: &#34;&#34;,
-&#34;remarks&#34;: &#34;proxy&#34;,
-&#34;timeout&#34;: 10,
-&#34;mode&#34;: &#34;tcp_and_udp&#34;
-}
-1.4 把shadowsocks-libe.service的ss-server修改成ss-local
-
-
-1
-2
-3
-4
-5
-
-
-cat /lib/systemd/system/shadowsocks-libev.service
-ExecStart=/usr/bin/ss-local -c $CONFFILE $DAEMON_ARGS
-
-sudo systemctl daemon-reload
-sudo systemctl restart shadowsocks-libev
-
-
-2. 测试ip代理是否成功
-curl -v  ip.gs   // 能成功显示代理IP则成功
-curl --socks5 127.0.0.1:1080 https://www.google.com  // 测试是否能访问google
-3. 配置http_proxy：
-v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_proxy=socks5">
-    <link rel="canonical" href="https://jianhu.cc/posts/ubuntu%E5%AE%BF%E4%B8%BB%E6%9C%BA%E9%83%A8%E7%BD%B2ss-local%E5%AE%A2%E6%88%B7%E7%AB%AF/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>深海映星辰 | 开发环境</title>
+    <meta name="description" content="深海映星辰是 Kelley 的技术博客，记录后端架构、AI Agent 工程化、可观测性、Docker/Kubernetes 与云原生实践。">
+    <link rel="canonical" href="https://jianhu.cc/tags/dev-env/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:url" content="https://jianhu.cc/posts/ubuntu%E5%AE%BF%E4%B8%BB%E6%9C%BA%E9%83%A8%E7%BD%B2ss-local%E5%AE%A2%E6%88%B7%E7%AB%AF/">
+    <meta property="og:url" content="https://jianhu.cc/tags/dev-env/">
   <meta property="og:site_name" content="深海映星辰">
-  <meta property="og:title" content="ubuntu宿主机部署ss-local客户端">
-  <meta property="og:description" content="shadowsocks-libev基于ubuntu宿主机部署ss-local客户端.md 1. 安装 1.1 准备环境： Linux ubuntu 6.2.0-20-generic ubuntu 2023-04 amd64 基于ubuntu宿主机安装 shadowsocks-libev和v2ray-plugin 1.2 安装shadowsocks-libev： sudo apt install shadowsocks-libev1.3 安装v2ray-plugin 1 2 3 4 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz tar -zxvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin chmod 775 /usr/bin/v2ray-plugin 1.3 配置shadowsocks-libev配置文件 vi /etc/shadowsocks-libev/config.json{&#34;server&#34;: &#34;domain.com&#34;,&#34;server_port&#34;: 443,&#34;password&#34;: &#34;password&#34;,&#34;method&#34;: &#34;aes-128-gcm&#34;,&#34;local_address&#34;: &#34;0.0.0.0&#34;,&#34;local_port&#34;: 1080,&#34;plugin&#34;: &#34;/usr/bin/v2ray-plugin&#34;,&#34;plugin_opts&#34;: &#34;tls;host=domain.com;path=/&#34;,&#34;plugin_args&#34;: &#34;&#34;,&#34;remarks&#34;: &#34;proxy&#34;,&#34;timeout&#34;: 10,&#34;mode&#34;: &#34;tcp_and_udp&#34;} 1.4 把shadowsocks-libe.service的ss-server修改成ss-local 1 2 3 4 5 cat /lib/systemd/system/shadowsocks-libev.service ExecStart=/usr/bin/ss-local -c $CONFFILE $DAEMON_ARGS sudo systemctl daemon-reload sudo systemctl restart shadowsocks-libev 2. 测试ip代理是否成功 curl -v ip.gs // 能成功显示代理IP则成功curl --socks5 127.0.0.1:1080 https://www.google.com // 测试是否能访问google 3. 配置http_proxy： v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_proxy=socks5">
+  <meta property="og:title" content="Dev-Env">
+  <meta property="og:description" content="深海映星辰是 Kelley 的技术博客，记录后端架构、AI Agent 工程化、可观测性、Docker/Kubernetes 与云原生实践。">
   <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-08-10T16:19:04+08:00">
-    <meta property="article:modified_time" content="2023-01-18T00:00:00+00:00">
-    <meta property="article:tag" content="Linux">
+  <meta property="og:type" content="website">
 
     
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ubuntu宿主机部署ss-local客户端">
-  <meta name="twitter:description" content="shadowsocks-libev基于ubuntu宿主机部署ss-local客户端.md 1. 安装 1.1 准备环境： Linux ubuntu 6.2.0-20-generic ubuntu 2023-04 amd64 基于ubuntu宿主机安装 shadowsocks-libev和v2ray-plugin 1.2 安装shadowsocks-libev： sudo apt install shadowsocks-libev1.3 安装v2ray-plugin 1 2 3 4 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz tar -zxvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin chmod 775 /usr/bin/v2ray-plugin 1.3 配置shadowsocks-libev配置文件 vi /etc/shadowsocks-libev/config.json{&#34;server&#34;: &#34;domain.com&#34;,&#34;server_port&#34;: 443,&#34;password&#34;: &#34;password&#34;,&#34;method&#34;: &#34;aes-128-gcm&#34;,&#34;local_address&#34;: &#34;0.0.0.0&#34;,&#34;local_port&#34;: 1080,&#34;plugin&#34;: &#34;/usr/bin/v2ray-plugin&#34;,&#34;plugin_opts&#34;: &#34;tls;host=domain.com;path=/&#34;,&#34;plugin_args&#34;: &#34;&#34;,&#34;remarks&#34;: &#34;proxy&#34;,&#34;timeout&#34;: 10,&#34;mode&#34;: &#34;tcp_and_udp&#34;} 1.4 把shadowsocks-libe.service的ss-server修改成ss-local 1 2 3 4 5 cat /lib/systemd/system/shadowsocks-libev.service ExecStart=/usr/bin/ss-local -c $CONFFILE $DAEMON_ARGS sudo systemctl daemon-reload sudo systemctl restart shadowsocks-libev 2. 测试ip代理是否成功 curl -v ip.gs // 能成功显示代理IP则成功curl --socks5 127.0.0.1:1080 https://www.google.com // 测试是否能访问google 3. 配置http_proxy： v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_proxy=socks5">
+  <meta name="twitter:title" content="Dev-Env">
+  <meta name="twitter:description" content="深海映星辰是 Kelley 的技术博客，记录后端架构、AI Agent 工程化、可观测性、Docker/Kubernetes 与云原生实践。">
 
     
 
@@ -214,6 +147,7 @@ v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_p
 
 
         <div id="content">
+    
 
 
 
@@ -221,31 +155,139 @@ v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_p
 
 
 
-
-    <div class="hero hero-page">
+    
         
-            <div class="hero-img hero-img-page hero-img-page-cover">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+    
+
+
+
+
+    
+        
+        
+        
+        
+        
+        
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+                
+                
+            
+        
+            
+                
+                
+            
+                
+                
+            
+        
+            
+                
+                
+            
+        
+            
+                
+                
+            
+        
+        
+        
+            
+                
+                
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+        
+        
+        <div class="hero hero-tag" style="--card-from: #e11d48; --card-to: #f43f5e;">
+            <a class="hero-tag-back" href="/tags/"><i class="fa fa-arrow-left"></i> 所有标签</a>
+            <div class="hero-tag-inner">
+                <div class="hero-tag-icon">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                </div>
+                <div class="hero-tag-name"># 开发环境</div>
+                <div class="hero-tag-meta">4 篇文章</div>
             </div>
-        
-        <div class="hero-content">
-            <div class="hero-title">ubuntu宿主机部署ss-local客户端</div>
-            <div class="hero-subtitle"></div>
-            <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2022-8-10 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2023-1-18 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-folder"></i>
-                        未收录
+            
+                <div class="hero-tag-related">
+                    <span class="hero-tag-related-label">相关标签</span>
+                    
                         
-                    </span>    
-            </div>
-            <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 489 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> 阅读时间: 1 分钟 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-eye"></i> 阅读量: <span id="busuanzi_value_page_pv"></span></span>
-            </div>
+                        
+                        <a class="hero-tag-related-pill" href="/tags/linux/" style="--pill-from: #f97316; --pill-to: #f59e0b;">
+                            <i class="fa fa-linux"></i> linux
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/network/" style="--pill-from: #2563eb; --pill-to: #3b82f6;">
+                            <i class="fa fa-share-alt"></i> Network
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/tools/" style="--pill-from: #84cc16; --pill-to: #22c55e;">
+                            <i class="fa fa-wrench"></i> Tools
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/ai/" style="--pill-from: #6366f1; --pill-to: #a855f7;">
+                            <i class="fa fa-magic"></i> AI
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/website/" style="--pill-from: #14b8a6; --pill-to: #06b6d4;">
+                            <i class="fa fa-globe"></i> Website
+                        </a>
+                    
+                </div>
+            
         </div>
-    </div>
+    
 
 
 
@@ -253,7 +295,7 @@ v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_p
 <div class="zhuti-0">
     <div class="container">
         <div class="zhuti">
-            <div class="zhuti-l">
+            <div class="zhuti-l zhuti-l-home">
                 
 
 
@@ -262,7 +304,7 @@ v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_p
     
 
 
-<div class="content-root">
+<div class="terms-body">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -275,356 +317,88 @@ v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_p
         </button>
     </div>
     
-        <div class="content">
-            <div class="content-self">
-                <h1 id="shadowsocks-libev基于ubuntu宿主机部署ss-local客户端md">shadowsocks-libev基于ubuntu宿主机部署ss-local客户端.md</h1>
-<h1 id="1-安装">1. 安装</h1>
-<h2 id="11-准备环境">1.1 准备环境：</h2>
-<ul>
-<li>Linux ubuntu 6.2.0-20-generic ubuntu  2023-04 amd64</li>
-<li>基于ubuntu宿主机安装 shadowsocks-libev和v2ray-plugin</li>
-</ul>
-<h2 id="12--安装shadowsocks-libev">1.2  安装shadowsocks-libev：</h2>
-<pre><code> sudo apt install shadowsocks-libev
-</code></pre>
-<h2 id="13---安装v2ray-plugin">1.3   安装v2ray-plugin</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.2/v2ray-plugin-linux-amd64-v1.3.2.tar.gz
-</span></span><span class="line"><span class="cl">tar -zxvf v2ray-plugin-linux-amd64-v1.3.2.tar.gz     
-</span></span><span class="line"><span class="cl">mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
-</span></span><span class="line"><span class="cl">chmod  <span class="m">775</span> /usr/bin/v2ray-plugin
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="13-配置shadowsocks-libev配置文件">1.3 配置shadowsocks-libev配置文件</h2>
-<pre tabindex="0"><code>vi /etc/shadowsocks-libev/config.json
-
-{
-&#34;server&#34;: &#34;domain.com&#34;,
-&#34;server_port&#34;: 443,
-&#34;password&#34;: &#34;password&#34;,
-&#34;method&#34;: &#34;aes-128-gcm&#34;,
-&#34;local_address&#34;: &#34;0.0.0.0&#34;,
-&#34;local_port&#34;: 1080,
-&#34;plugin&#34;: &#34;/usr/bin/v2ray-plugin&#34;,
-&#34;plugin_opts&#34;: &#34;tls;host=domain.com;path=/&#34;,
-&#34;plugin_args&#34;: &#34;&#34;,
-&#34;remarks&#34;: &#34;proxy&#34;,
-&#34;timeout&#34;: 10,
-&#34;mode&#34;: &#34;tcp_and_udp&#34;
-}
-</code></pre><h2 id="14-把shadowsocks-libeservice的ss-server修改成ss-local">1.4 把shadowsocks-libe.service的ss-server修改成ss-local</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat /lib/systemd/system/shadowsocks-libev.service
-</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/ss-local -c <span class="nv">$CONFFILE</span> <span class="nv">$DAEMON_ARGS</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
-</span></span><span class="line"><span class="cl">sudo systemctl restart shadowsocks-libev
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h1 id="2-测试ip代理是否成功">2. 测试ip代理是否成功</h1>
-<pre tabindex="0"><code>curl -v  ip.gs   // 能成功显示代理IP则成功
-curl --socks5 127.0.0.1:1080 https://www.google.com  // 测试是否能访问google
-</code></pre><h1 id="3-配置http_proxy">3. 配置http_proxy：</h1>
-<p>v2ray-plugs是用的socks5协议，所以本地走代理的话需要配置http_proxy=socks5</p>
-<h2 id="31-临时配置http_proxy">3.1 临时配置http_proxy</h2>
-<pre tabindex="0"><code>export http_proxy=socks5://127.0.0.1:1080
-export https_proxy=$http_proxy
-</code></pre><h2 id="32-永久配置http_proxy">3.2 永久配置http_proxy</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vi  /etc/profile
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">PROXY_HOST</span><span class="o">=</span>127.0.0.1
-</span></span><span class="line"><span class="cl"><span class="nv">PROXY_PORT</span><span class="o">=</span><span class="m">1080</span>
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>socks5://<span class="nv">$PROXY_HOST</span>:<span class="nv">$PROXY_PORT</span>
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">no_proxy</span><span class="o">=</span>localhost,172.16.0.0/16,192.168.0.0/16.,127.0.0.1,10.10.0.0/16,192.168.159.0/24,192.168.171.0/24
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h1 id="4-取消http_proxy代理">4. 取消http_proxy代理</h1>
-<pre tabindex="0"><code> unset http_proxy
- unset https_proxy
-</code></pre><h1 id="5-参考">5. 参考</h1>
-<p>v2ray各种系统配置示例</p>
-<ul>
-<li><a href="https://github.com/v2fly/v2ray-examples/blob/master/Shadowsocks-Websocket-Web-TLS/config_client.json">https://github.com/v2fly/v2ray-examples/blob/master/Shadowsocks-Websocket-Web-TLS/config_client.json</a></li>
-</ul>
-<p>socks5配置参考：</p>
-<ul>
-<li><a href="https://gist.github.com/yougg/5d2b3353fc5e197a0917aae0b3287d64">https://gist.github.com/yougg/5d2b3353fc5e197a0917aae0b3287d64</a></li>
-</ul>
-
-            </div>
-            
-                <div class="tags">
-                    
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='/tags/linux'>
-                                <i class="fa fa-tag"></i> linux
-                            </a>
-                        </div>
-                    </span>
-                    
-                </div>
-            
-        </div>
         
-            
-                <div class="pre-next">
-                    
-    
-        
-        <a href="https://jianhu.cc/posts/%E4%BD%BF%E7%94%A8cloudflare%E8%BD%AC%E5%8F%91ssh%E7%AB%AF%E5%8F%A3/" class="pre">
-            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
-            <div class="pre-title-root">
-                <span>使用cloudflare转发ssh端口</span>
-            </div>
-        </a>
-        
-
-        
-        <a href="https://jianhu.cc/posts/centos7.9%E6%89%A9%E5%B1%95%E7%A3%81%E7%9B%98/" class="next">
-            <div class="next-title-root">
-                <span>centos7.9扩展磁盘</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
-    
-    
-
-                </div>
-            
-        
-    
-</div>
-
-    
-        <div class="content-last">
-            
-                <button class="aixin content-last-item efct-button">
-                    <i class="fa fa-heart"></i>
-                </button>
-            
-            
-        </div>
-    
-
-
-            </div>
-            <div class="zhuti-r">
+            <div class="post-row-list">
                 
-<div class="zhuti-r-0">
-    <div class="zhuti-r-1">
-        
-        <div id="r1">
-            
-
-<div class="about-zuozhe">
-    <div class="zuozhe">
-        
-            <div class="datou">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/touxiang.png" alt="">
-            </div>
-        
-        <div class="name-jianjie">
-            <div class="name">kelleygo</div>
-            <div class="jianjie">
-                随笔记录,为技术沉淀.
-            </div>
+                    <a class="post-row" href="https://jianhu.cc/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="--card-from: #f97316; --card-to: #f59e0b;">
+    <span class="post-row-stripe"></span>
+    <div class="post-row-main">
+        <div class="post-row-head">
+            <span class="post-row-title">ubuntu 22.04 安装go</span>
+            <span class="post-row-date">2024-04-21</span>
         </div>
-    </div>
-
-    <div class="type">
-        <a href='/posts/'>
-            <p>文章</p>
-            <p>29</p>
-        </a>
-        <a href='/categories/'>
-            <p>分类</p>
-            <p>0</p>
-        </a>
-        <a href='/tags/'>
-            <p>标签</p>
-            <p>6</p>
-        </a>
-    </div>
-
-    <a href="https://github.com/jianhu2">
-        <div class="follow">Follow Me</div>
-    </a>
-    <div class="link">
-        
-        <a href="https://github.com/jianhu2" class="link-item is-hidden-desktop" title="GitHub">
-            <span class="icon"><i class='fa fa-github'></i></span>
-        </a>
-        
-    </div>
-</div>
-
-            <div class="mulu">
-    <div class="dong"></div>
-    <div class="zhi">
-        <div class="wenzi">
-            <div class="zhi-mulu text-wbd">目录</div>
-            <div class="mulu-items">
-            </div>
-        </div>
-    </div>
-</div>
-            
-
-
-
-    
-    
-
-
-<div class="other">
-    <div class="other-up">
-        <div class="other-qita text-wbd">相关文章</div>
-        <div class="xian"></div>
-    </div>
-    <div class="list">
-        
-            <a class="side-post" href="https://jianhu.cc/posts/naivcat%E5%AE%89%E8%A3%85/" style="--card-from: #f97316; --card-to: #f59e0b;">
-    <div class="side-post-icon">
-        <i class="fa fa-linux" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">navicat 15注册码</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#linux</span>
-            <span class="side-post-date">2022-05-19</span>
+        <div class="post-row-summary">ubuntu 22.04 安装go(适用ubuntu20以上版本) 环境准备 apt update &amp;&amp; apt-get upgrade -y 环境安装 mkdir ~/go
+cd ~/go
+wget…</div>
+        <div class="post-row-meta">
+            <span><i class="fa fa-clock-o"></i> 1 分钟</span>
+            <span><i class="fa fa-pencil"></i> 467 文章字数</span>
         </div>
     </div>
 </a>
 
-        
-            <a class="side-post" href="https://jianhu.cc/posts/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85docker/" style="--card-from: #f97316; --card-to: #f59e0b;">
-    <div class="side-post-icon">
-        <i class="fa fa-linux" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">ansible自动化安装docker</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#linux</span>
-            <span class="side-post-date">2025-03-18</span>
+                
+                    <a class="post-row" href="https://jianhu.cc/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="--card-from: #f97316; --card-to: #f59e0b;">
+    <span class="post-row-stripe"></span>
+    <div class="post-row-main">
+        <div class="post-row-head">
+            <span class="post-row-title">Centos7.x配置Go开发环境</span>
+            <span class="post-row-date">2024-04-21</span>
+        </div>
+        <div class="post-row-summary">Centos7.x配置Go开发环境 安装golang 准备环境
+$ sudo yum update$ sudo yum install wget vim -y 源码包编译安装（可下最新版本）：
+$ wget…</div>
+        <div class="post-row-meta">
+            <span><i class="fa fa-clock-o"></i> 2 分钟</span>
+            <span><i class="fa fa-pencil"></i> 593 文章字数</span>
         </div>
     </div>
 </a>
 
-        
-            <a class="side-post" href="https://jianhu.cc/posts/ubuntu%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85docker/" style="--card-from: #f97316; --card-to: #f59e0b;">
-    <div class="side-post-icon">
-        <i class="fa fa-linux" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">ubuntu2404手动安装docker</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#linux</span>
-            <span class="side-post-date">2025-03-18</span>
+                
+                    <a class="post-row" href="https://jianhu.cc/posts/gcc13.2%E7%89%88%E6%9C%ACwindwos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" style="--card-from: #e11d48; --card-to: #f43f5e;">
+    <span class="post-row-stripe"></span>
+    <div class="post-row-main">
+        <div class="post-row-head">
+            <span class="post-row-title">gcc windows环境安装(目前13.2版本)</span>
+            <span class="post-row-date">2023-11-02</span>
+        </div>
+        <div class="post-row-summary">文章目录 1 2 3 4 5 6 7 8 9 10 11 一、简介 1. MinGW 和 MinGW-W64 区别和联系 二、下载 1. 从 sourceforge.net 下载 2. 从 github 下载 3. 从…</div>
+        <div class="post-row-meta">
+            <span><i class="fa fa-clock-o"></i> 3 分钟</span>
+            <span><i class="fa fa-pencil"></i> 1146 文章字数</span>
         </div>
     </div>
 </a>
 
-        
-            <a class="side-post" href="https://jianhu.cc/posts/centos-7-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="--card-from: #f97316; --card-to: #f59e0b;">
-    <div class="side-post-icon">
-        <i class="fa fa-linux" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">Centos7.x配置Go开发环境</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#linux</span>
-            <span class="side-post-date">2024-04-21</span>
+                
+                    <a class="post-row" href="https://jianhu.cc/posts/goland-ide%E8%BF%BD%E6%96%B0/" style="--card-from: #e11d48; --card-to: #f43f5e;">
+    <span class="post-row-stripe"></span>
+    <div class="post-row-main">
+        <div class="post-row-head">
+            <span class="post-row-title">GoLand 安装与更新建议（旧文已废弃）</span>
+            <span class="post-row-date">2023-07-21</span>
+        </div>
+        <div class="post-row-summary"> 状态：已废弃。
+这篇文章最早写于 2023 年，当时记录的是旧版 GoLand 的非官方激活流程。该内容已经过时，也不再保留。现在建议统一走 JetBrains 官方安装、更新和授权渠道。
+当前建议 截至…</div>
+        <div class="post-row-meta">
+            <span><i class="fa fa-clock-o"></i> 2 分钟</span>
+            <span><i class="fa fa-pencil"></i> 755 文章字数</span>
         </div>
     </div>
 </a>
 
+                
+            </div>
         
-            <a class="side-post" href="https://jianhu.cc/posts/ubuntu22.04-go%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="--card-from: #f97316; --card-to: #f59e0b;">
-    <div class="side-post-icon">
-        <i class="fa fa-linux" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">ubuntu 22.04 安装go</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#linux</span>
-            <span class="side-post-date">2024-04-21</span>
-        </div>
-    </div>
-</a>
-
-        
-    </div>
+    
 </div>
-        </div>
-        <div id="r2">
-            
-        </div> 
-    </div>
-</div>
+
 
             </div>
-        </div>
-    </div>
-</div>
-
-    
-
-<div class="sponsor">
-    <div class="sponsor-self">
-        <div class="sponsor-title">赞赏</div>
-        <div class="sponsor-btn">
-            
-                
-                    <div class="sponsor-btn-1">微信支付</div>
-                
-                
             
         </div>
-        
-        <div class="sponsor-img">
-            
-                
-                    <img class="sponsor-img-1" src="/images/wechatpay.png" alt="">
-                
-                
-            
-        </div>
-        <div class="cancel efct-button">取消</div>
     </div>
 </div>
 

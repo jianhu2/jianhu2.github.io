@@ -6,8 +6,15 @@
     <description>Recent content on 深海映星辰</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jianhu.cc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内网穿透与远程访问方案总结</title>
+      <link>https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 12 May 2026 10:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;h1 id=&#34;内网穿透与远程访问方案总结&#34;&gt;内网穿透与远程访问方案总结&lt;/h1&gt;&#xA;&lt;p&gt;整理一下常用的内网穿透 / 远程访问方案，按 “是否需要公网 IP / 协议范围 / 部署难度” 做了归类。文末是个人当前在用的组合和对比体感，给选型当个参考。&lt;/p&gt;&#xA;&lt;h2 id=&#34;tldr--当前在用zerotier--rdp&#34;&gt;TL;DR — 当前在用：ZeroTier + RDP&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;组网&lt;/strong&gt;：ZeroTier，自建 moon node&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;远程桌面&lt;/strong&gt;：直接走 Windows 原生 RDP（在 ZeroTier 虚拟网里，等同于同一局域网）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;核心结论&lt;/strong&gt;：在两端都接入同一&lt;strong&gt;自建节点&lt;/strong&gt;的前提下，ZeroTier 比 Tailscale 明显更流畅 —— 这是当前选 ZeroTier 的主要原因&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;下面按五类整理。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI-Agent-OpenClaw架构与工作原理</title>
       <link>https://jianhu.cc/posts/openclaw-%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</link>
