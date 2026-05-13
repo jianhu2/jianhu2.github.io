@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn"><head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><title>深海映星辰 | 基于ssh隧道转发端口</title>
-    <meta name="description" content="ssh端口转发(ssh port-forward)
-SSH 除了登录服务器，还有一大用途，就是作为加密通信的中介，充当两台服务器之间的通信加密跳板，使得原本不加密的通信变成加密通信。这个功能称为端口转发（port forwarding），又称 SSH 隧道（tunnel）。
-端口转发有两个主要作用：
-
-
-将不加密的数据放在 SSH 安全连接里面传输，使得原本不安全的网络服务增加了安全性，比如通过端口转发访问 Telnet、FTP 等明文服务，数据传输就都会加密。">
-    <link rel="canonical" href="https://jianhu.cc/posts/port-forward/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>深海映星辰 | Lxc</title>
+    <meta name="description" content="深海映星辰是 Kelley 的技术博客，记录后端架构、AI Agent 工程化、可观测性、Docker/Kubernetes 与云原生实践。">
+    <link rel="canonical" href="https://jianhu.cc/tags/lxc/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:url" content="https://jianhu.cc/posts/port-forward/">
+    <meta property="og:url" content="https://jianhu.cc/tags/lxc/">
   <meta property="og:site_name" content="深海映星辰">
-  <meta property="og:title" content="基于ssh隧道转发端口">
-  <meta property="og:description" content="ssh端口转发(ssh port-forward) SSH 除了登录服务器，还有一大用途，就是作为加密通信的中介，充当两台服务器之间的通信加密跳板，使得原本不加密的通信变成加密通信。这个功能称为端口转发（port forwarding），又称 SSH 隧道（tunnel）。 端口转发有两个主要作用：
-将不加密的数据放在 SSH 安全连接里面传输，使得原本不安全的网络服务增加了安全性，比如通过端口转发访问 Telnet、FTP 等明文服务，数据传输就都会加密。">
+  <meta property="og:title" content="Lxc">
+  <meta property="og:description" content="深海映星辰是 Kelley 的技术博客，记录后端架构、AI Agent 工程化、可观测性、Docker/Kubernetes 与云原生实践。">
   <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-05-10T16:19:04+08:00">
-    <meta property="article:modified_time" content="2023-01-20T00:00:00+00:00">
-    <meta property="article:tag" content="Network">
+  <meta property="og:type" content="website">
 
     
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="基于ssh隧道转发端口">
-  <meta name="twitter:description" content="ssh端口转发(ssh port-forward) SSH 除了登录服务器，还有一大用途，就是作为加密通信的中介，充当两台服务器之间的通信加密跳板，使得原本不加密的通信变成加密通信。这个功能称为端口转发（port forwarding），又称 SSH 隧道（tunnel）。 端口转发有两个主要作用：
-将不加密的数据放在 SSH 安全连接里面传输，使得原本不安全的网络服务增加了安全性，比如通过端口转发访问 Telnet、FTP 等明文服务，数据传输就都会加密。">
+  <meta name="twitter:title" content="Lxc">
+  <meta name="twitter:description" content="深海映星辰是 Kelley 的技术博客，记录后端架构、AI Agent 工程化、可观测性、Docker/Kubernetes 与云原生实践。">
 
     
 
@@ -158,6 +147,7 @@ SSH 除了登录服务器，还有一大用途，就是作为加密通信的中�
 
 
         <div id="content">
+    
 
 
 
@@ -165,31 +155,155 @@ SSH 除了登录服务器，还有一大用途，就是作为加密通信的中�
 
 
 
-
-    <div class="hero hero-page">
+    
         
-            <div class="hero-img hero-img-page hero-img-page-cover">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+    
+
+
+
+
+    
+        
+        
+        
+        
+        
+        
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+                
+                
+            
+                
+                
+                    
+                    
+                
+            
+        
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+        
+        
+        
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+                
+                
+                
+            
+                
+                
+                
+            
+                
+                
+                
+                    
+                    
+                
+            
+        
+        
+        <div class="hero hero-tag" style="--card-from: #64748b; --card-to: #94a3b8;">
+            <a class="hero-tag-back" href="/tags/"><i class="fa fa-arrow-left"></i> 所有标签</a>
+            <div class="hero-tag-inner">
+                <div class="hero-tag-icon">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                </div>
+                <div class="hero-tag-name"># Lxc</div>
+                <div class="hero-tag-meta">2 篇文章</div>
             </div>
-        
-        <div class="hero-content">
-            <div class="hero-title">基于ssh隧道转发端口</div>
-            <div class="hero-subtitle"></div>
-            <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> 发布于: 2022-5-10 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> 更新于: 2023-1-20 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-folder"></i>
-                        未收录
+            
+                <div class="hero-tag-related">
+                    <span class="hero-tag-related-label">相关标签</span>
+                    
                         
-                    </span>    
-            </div>
-            <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> 文章字数: 674 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> 阅读时间: 2 分钟 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-eye"></i> 阅读量: <span id="busuanzi_value_page_pv"></span></span>
-            </div>
+                        
+                        <a class="hero-tag-related-pill" href="/tags/network/" style="--pill-from: #2563eb; --pill-to: #3b82f6;">
+                            <i class="fa fa-share-alt"></i> network
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/gost/" style="--pill-from: #64748b; --pill-to: #94a3b8;">
+                            <i class="fa fa-file-text-o"></i> gost
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/linux/" style="--pill-from: #f97316; --pill-to: #f59e0b;">
+                            <i class="fa fa-linux"></i> Linux
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/dev-env/" style="--pill-from: #e11d48; --pill-to: #f43f5e;">
+                            <i class="fa fa-cogs"></i> 开发环境
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/tools/" style="--pill-from: #84cc16; --pill-to: #22c55e;">
+                            <i class="fa fa-wrench"></i> Tools
+                        </a>
+                    
+                        
+                        
+                        <a class="hero-tag-related-pill" href="/tags/ai/" style="--pill-from: #6366f1; --pill-to: #a855f7;">
+                            <i class="fa fa-magic"></i> AI
+                        </a>
+                    
+                </div>
+            
         </div>
-    </div>
+    
 
 
 
@@ -197,7 +311,7 @@ SSH 除了登录服务器，还有一大用途，就是作为加密通信的中�
 <div class="zhuti-0">
     <div class="container">
         <div class="zhuti">
-            <div class="zhuti-l">
+            <div class="zhuti-l zhuti-l-home">
                 
 
 
@@ -206,7 +320,7 @@ SSH 除了登录服务器，还有一大用途，就是作为加密通信的中�
     
 
 
-<div class="content-root">
+<div class="terms-body">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -219,301 +333,51 @@ SSH 除了登录服务器，还有一大用途，就是作为加密通信的中�
         </button>
     </div>
     
-        <div class="content">
-            <div class="content-self">
-                <h1 id="ssh端口转发ssh-port-forward">ssh端口转发(ssh port-forward)</h1>
-<p>SSH 除了登录服务器，还有一大用途，就是作为加密通信的中介，充当两台服务器之间的通信加密跳板，使得原本不加密的通信变成加密通信。这个功能称为端口转发（port forwarding），又称 SSH 隧道（tunnel）。
-端口转发有两个主要作用：</p>
-<ol>
-<li>
-<p>将不加密的数据放在 SSH 安全连接里面传输，使得原本不安全的网络服务增加了安全性，比如通过端口转发访问 Telnet、FTP 等明文服务，数据传输就都会加密。</p>
-</li>
-<li>
-<p>作为数据通信的加密跳板，绕过网络防火墙。</p>
-</li>
-</ol>
-<p>端口转发有三种使用方法：本地转发，远程转发，动态转发。 因为常用到了前两种转发，这里只介绍前两种转发。</p>
-<h2 id="1-本地转发">1. 本地转发</h2>
-<p>本地转发(local forwarding)指的是，将目标服务器的端口(target-host:target-port) 转发跳板机(tunnel-host) 映射到本地端口(local-port);
-然后访问本地的端口(local-port)就可以通过跳板机(tunnel-host)转发到目标服务器的端口(target-host:target-port);</p>
-<ul>
-<li><code>sh -L local-port:target-host:target-port tunnel-host</code></li>
-</ul>
-<p>示例：</p>
-<ul>
-<li>转发redis到本地16379
-<ul>
-<li><code>ssh -L 16379:127.0.0.1:6379 dev.hujian.xyz -N </code></li>
-</ul>
-</li>
-</ul>
-<h3 id="2-远程转发">2. 远程转发</h3>
-<p>远程转发指的是在远程 SSH 服务器建立的转发规则。
-它跟本地转发正好反过来。建立本地计算机到远程计算机的 SSH 隧道以后，本地转发是通过本地计算机访问远程计算机，而远程转发则是通过远程计算机访问本地计算机。它的命令格式如下。</p>
-<p><code>ssh -R remote-port:target-host:target-port -N remotehost</code></p>
-<p>示例：</p>
-<ul>
-<li>远程计算机通过<code>curl http://my.public.server:8080</code> 访问本地的80 web服务
-<ul>
-<li><code>ssh -R 8080:localhost:80 -N my.public.server</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-k8s端口本地转发">3. k8s端口本地转发：</h2>
-<p>redis端口转发示例：</p>
-<ul>
-<li><code>kubectl port-forward service/redis -n devops-test 26379:6379</code></li>
-</ul>
-<h2 id="4-参考连接">4 参考连接：</h2>
-<ul>
-<li><a href="https://wangdoc.com/ssh/port-forwarding.html">ssh 端口转发</a></li>
-<li><a href="https://solitum.net/posts/an-illustrated-guide-to-ssh-tunnels">An Illustrated Guide to SSH Tunnels</a></li>
-<li><a href="https://kubernetes.io/zh-cn/docs/tasks/access-application-cluster/port-forward-access-application-cluster/">kubernetes port-forward</a></li>
-</ul>
-
-            </div>
-            
-                <div class="tags">
-                    
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='/tags/network'>
-                                <i class="fa fa-tag"></i> network
-                            </a>
-                        </div>
-                    </span>
-                    
-                </div>
-            
-        </div>
         
-            
-                <div class="pre-next">
-                    
-    
-        
-        <a href="https://jianhu.cc/posts/%E7%94%9F%E6%88%90https%E8%AF%81%E4%B9%A6/" class="pre">
-            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
-            <div class="pre-title-root">
-                <span>生成HTTPS证书</span>
-            </div>
-        </a>
-        
-
-        
-        <a href="https://jianhu.cc/posts/naivcat%E5%AE%89%E8%A3%85/" class="next">
-            <div class="next-title-root">
-                <span>navicat 15注册码</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
-    
-    
-
-                </div>
-            
-        
-    
-</div>
-
-    
-        <div class="content-last">
-            
-                <button class="aixin content-last-item efct-button">
-                    <i class="fa fa-heart"></i>
-                </button>
-            
-            
-        </div>
-    
-
-
-            </div>
-            <div class="zhuti-r">
+            <div class="post-row-list">
                 
-<div class="zhuti-r-0">
-    <div class="zhuti-r-1">
-        
-        <div id="r1">
-            
-
-<div class="about-zuozhe">
-    <div class="zuozhe">
-        
-            <div class="datou">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/touxiang.png" alt="">
-            </div>
-        
-        <div class="name-jianjie">
-            <div class="name">kelleygo</div>
-            <div class="jianjie">
-                随笔记录,为技术沉淀.
-            </div>
+                    <a class="post-row" href="https://jianhu.cc/posts/home-lxc-tunnel-cost/" style="--card-from: #2563eb; --card-to: #3b82f6;">
+    <span class="post-row-stripe"></span>
+    <div class="post-row-main">
+        <div class="post-row-head">
+            <span class="post-row-title">家宽 LXC 穿透方案成本评估</span>
+            <span class="post-row-date">2026-05-13</span>
         </div>
-    </div>
-
-    <div class="type">
-        <a href='/posts/'>
-            <p>文章</p>
-            <p>31</p>
-        </a>
-        <a href='/categories/'>
-            <p>分类</p>
-            <p>0</p>
-        </a>
-        <a href='/tags/'>
-            <p>标签</p>
-            <p>8</p>
-        </a>
-    </div>
-
-    <a href="https://github.com/jianhu2">
-        <div class="follow">Follow Me</div>
-    </a>
-    <div class="link">
-        
-        <a href="https://github.com/jianhu2" class="link-item is-hidden-desktop" title="GitHub">
-            <span class="icon"><i class='fa fa-github'></i></span>
-        </a>
-        
-    </div>
-</div>
-
-            <div class="mulu">
-    <div class="dong"></div>
-    <div class="zhi">
-        <div class="wenzi">
-            <div class="zhi-mulu text-wbd">目录</div>
-            <div class="mulu-items">
-            </div>
-        </div>
-    </div>
-</div>
-            
-
-
-
-    
-    
-
-
-<div class="other">
-    <div class="other-up">
-        <div class="other-qita text-wbd">相关文章</div>
-        <div class="xian"></div>
-    </div>
-    <div class="list">
-        
-            <a class="side-post" href="https://jianhu.cc/posts/%E4%BD%BF%E7%94%A8cloudflare%E8%BD%AC%E5%8F%91ssh%E7%AB%AF%E5%8F%A3/" style="--card-from: #2563eb; --card-to: #3b82f6;">
-    <div class="side-post-icon">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">使用cloudflare转发ssh端口</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#network</span>
-            <span class="side-post-date">2022-07-21</span>
+        <div class="post-row-summary">家宽 LXC 穿透方案成本评估 版本:v1.0 日期:2026-05-13 范围:仅评估 gost + LXC + VPS 家宽穿透方案的投入成本,不重复讨论技术可行性。
+一、评估口径 本评估按个人或小团队自托管场景估算…</div>
+        <div class="post-row-meta">
+            <span><i class="fa fa-clock-o"></i> 3 分钟</span>
+            <span><i class="fa fa-pencil"></i> 1061 文章字数</span>
         </div>
     </div>
 </a>
 
-        
-            <a class="side-post" href="https://jianhu.cc/posts/%E7%94%9F%E6%88%90https%E8%AF%81%E4%B9%A6/" style="--card-from: #2563eb; --card-to: #3b82f6;">
-    <div class="side-post-icon">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">生成HTTPS证书</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#network</span>
-            <span class="side-post-date">2022-03-21</span>
+                
+                    <a class="post-row" href="https://jianhu.cc/posts/home-lxc-tunnel-feasibility/" style="--card-from: #2563eb; --card-to: #3b82f6;">
+    <span class="post-row-stripe"></span>
+    <div class="post-row-main">
+        <div class="post-row-head">
+            <span class="post-row-title">基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究</span>
+            <span class="post-row-date">2026-05-13</span>
+        </div>
+        <div class="post-row-summary">基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究报告 版本:v1.2(技术可行性主文) 日期:2026-05-13 受众:技术决策者(架构师、SRE、运维负责人) 目的:评估在无公网 IP 的家宽环境下…</div>
+        <div class="post-row-meta">
+            <span><i class="fa fa-clock-o"></i> 15 分钟</span>
+            <span><i class="fa fa-pencil"></i> 7509 文章字数</span>
         </div>
     </div>
 </a>
 
+                
+            </div>
         
-            <a class="side-post" href="https://jianhu.cc/posts/home-lxc-tunnel-cost/" style="--card-from: #2563eb; --card-to: #3b82f6;">
-    <div class="side-post-icon">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">家宽 LXC 穿透方案成本评估</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#network</span>
-            <span class="side-post-date">2026-05-13</span>
-        </div>
-    </div>
-</a>
-
-        
-            <a class="side-post" href="https://jianhu.cc/posts/home-lxc-tunnel-feasibility/" style="--card-from: #2563eb; --card-to: #3b82f6;">
-    <div class="side-post-icon">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#network</span>
-            <span class="side-post-date">2026-05-13</span>
-        </div>
-    </div>
-</a>
-
-        
-            <a class="side-post" href="https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/" style="--card-from: #2563eb; --card-to: #3b82f6;">
-    <div class="side-post-icon">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-    </div>
-    <div class="side-post-body">
-        <div class="side-post-title">内网穿透与远程访问方案总结</div>
-        <div class="side-post-meta">
-            <span class="side-post-tag">#network</span>
-            <span class="side-post-date">2026-05-12</span>
-        </div>
-    </div>
-</a>
-
-        
-    </div>
+    
 </div>
-        </div>
-        <div id="r2">
-            
-        </div> 
-    </div>
-</div>
+
 
             </div>
-        </div>
-    </div>
-</div>
-
-    
-
-<div class="sponsor">
-    <div class="sponsor-self">
-        <div class="sponsor-title">赞赏</div>
-        <div class="sponsor-btn">
-            
-                
-                    <div class="sponsor-btn-1">微信支付</div>
-                
-                
             
         </div>
-        
-        <div class="sponsor-img">
-            
-                
-                    <img class="sponsor-img-1" src="/images/wechatpay.png" alt="">
-                
-                
-            
-        </div>
-        <div class="cancel efct-button">取消</div>
     </div>
 </div>
 

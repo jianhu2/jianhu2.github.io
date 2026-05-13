@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jianhu.cc/tags/gost/</loc>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jianhu.cc/tags/lxc/</loc>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jianhu.cc/tags/network/</loc>
-    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jianhu.cc/posts/</loc>
-    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jianhu.cc/tags/</loc>
-    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jianhu.cc/posts/home-lxc-tunnel-cost/</loc>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jianhu.cc/</loc>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jianhu.cc/posts/home-lxc-tunnel-feasibility/</loc>
+    <lastmod>2026-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jianhu.cc/tags/tools/</loc>
     <lastmod>2026-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jianhu.cc/</loc>
     <lastmod>2026-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jianhu.cc/tags/ai/</loc>

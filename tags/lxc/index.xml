@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lxc on 深海映星辰</title>
+    <link>https://jianhu.cc/tags/lxc/</link>
+    <description>Recent content in Lxc on 深海映星辰</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jianhu.cc/tags/lxc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>家宽 LXC 穿透方案成本评估</title>
+      <link>https://jianhu.cc/posts/home-lxc-tunnel-cost/</link>
+      <pubDate>Wed, 13 May 2026 12:45:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/home-lxc-tunnel-cost/</guid>
+      <description>&lt;h1 id=&#34;家宽-lxc-穿透方案成本评估&#34;&gt;家宽 LXC 穿透方案成本评估&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;版本&lt;/strong&gt;:v1.0&#xA;&lt;strong&gt;日期&lt;/strong&gt;:2026-05-13&#xA;&lt;strong&gt;范围&lt;/strong&gt;:仅评估 gost + LXC + VPS 家宽穿透方案的投入成本,不重复讨论技术可行性。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;一评估口径&#34;&gt;一、评估口径&lt;/h2&gt;&#xA;&lt;p&gt;本评估按个人或小团队自托管场景估算,默认技术方案为:家宽宿主机运行 LXC 容器,gost 负责反向隧道,VPS 作为公网中转入口。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究</title>
+      <link>https://jianhu.cc/posts/home-lxc-tunnel-feasibility/</link>
+      <pubDate>Wed, 13 May 2026 12:40:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/home-lxc-tunnel-feasibility/</guid>
+      <description>&lt;h1 id=&#34;基于-gost-反向隧道的家宽-lxc-容器公网穿透技术可行性研究报告&#34;&gt;基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究报告&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;版本&lt;/strong&gt;:v1.2(技术可行性主文)&#xA;&lt;strong&gt;日期&lt;/strong&gt;:2026-05-13&#xA;&lt;strong&gt;受众&lt;/strong&gt;:技术决策者(架构师、SRE、运维负责人)&#xA;&lt;strong&gt;目的&lt;/strong&gt;:评估在无公网 IP 的家宽环境下,使用 gost + LXC + VPS 中转架构对外提供服务的技术可行性&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;图表索引&#34;&gt;图表索引&lt;/h2&gt;&#xA;&lt;p&gt;本报告共包含 6 张可视化图表,采用 Mermaid 语法绘制,在 GitHub / VSCode / Typora / Obsidian 等主流 Markdown 渲染器中均可直接显示:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
