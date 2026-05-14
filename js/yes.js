@@ -61,8 +61,6 @@ $(document).ready(function () {
         $('.down-summary a').contents().unwrap();
     }
 
-    $(".hero-img-home").height($(window).height() - 108);
-
     var termsRoot = $('.terms-root');
     if (termsRoot) {
         termsRoot.each(function() {
@@ -532,7 +530,6 @@ $(document).ready(function () {
             $("#content, footer").removeClass("mask");
             $(".header-rest").click();
         }
-        $(".hero-img-home").height($(window).height() - 108);
     });
 
     $(window).scroll(function () {
@@ -629,7 +626,7 @@ $(document).ready(function () {
             var title = it.attr('title');
             it.attr({
                 'data-src': it.attr('src'),
-                'src': '/images/thumbnail.gif'
+                'src': 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=='
             });
             it.addClass('lazyload has-shadow');
             if (title) {
