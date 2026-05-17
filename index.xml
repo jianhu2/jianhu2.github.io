@@ -6,7 +6,7 @@
     <description>Recent content on 深海映星辰</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jianhu.cc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>家宽 LXC 穿透方案成本评估</title>
@@ -20,7 +20,7 @@
       <link>https://jianhu.cc/posts/home-lxc-tunnel-feasibility/</link>
       <pubDate>Wed, 13 May 2026 12:40:00 +0800</pubDate>
       <guid>https://jianhu.cc/posts/home-lxc-tunnel-feasibility/</guid>
-      <description>&lt;h1 id=&#34;基于-gost-反向隧道的家宽-lxc-容器公网穿透技术可行性研究报告&#34;&gt;基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究报告&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;版本&lt;/strong&gt;:v1.2(技术可行性主文)&#xA;&lt;strong&gt;日期&lt;/strong&gt;:2026-05-13&#xA;&lt;strong&gt;受众&lt;/strong&gt;:技术决策者(架构师、SRE、运维负责人)&#xA;&lt;strong&gt;目的&lt;/strong&gt;:评估在无公网 IP 的家宽环境下,使用 gost + LXC + VPS 中转架构对外提供服务的技术可行性&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;图表索引&#34;&gt;图表索引&lt;/h2&gt;&#xA;&lt;p&gt;本报告共包含 6 张可视化图表,采用 Mermaid 语法绘制,在 GitHub / VSCode / Typora / Obsidian 等主流 Markdown 渲染器中均可直接显示:&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;基于-gost-反向隧道的家宽-lxc-容器公网穿透技术可行性研究报告&#34;&gt;基于 gost 反向隧道的家宽 LXC 容器公网穿透技术可行性研究报告&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;版本&lt;/strong&gt;:v1.3(技术可行性主文,2026-05-17 基于真实环境实测修订)&#xA;&lt;strong&gt;日期&lt;/strong&gt;:2026-05-17&#xA;&lt;strong&gt;受众&lt;/strong&gt;:技术决策者(架构师、SRE、运维负责人)&#xA;&lt;strong&gt;目的&lt;/strong&gt;:评估在无公网 IP 的家宽环境下,使用 gost + LXC + VPS 中转架构对外提供服务的技术可行性&lt;/p&gt;</description>
     </item>
     <item>
       <title>内网穿透与远程访问方案总结</title>

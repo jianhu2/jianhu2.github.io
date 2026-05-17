@@ -49,10 +49,7 @@
     
 }
 .hero-img-home {
-    height: calc(100vh - 108px);
-    height: calc(100svh - 108px);
-    min-height: 420px;
-    max-height: 760px;
+    height: 400px;
     width: 100%;
     border: 4px solid var(--bgc-1);
     box-sizing: border-box;
@@ -117,10 +114,6 @@
 
 @media only screen and (max-width: 768px) {
     .hero-img-home {
-        height: calc(100vh - 108px);
-        height: calc(100svh - 108px);
-        min-height: 520px;
-        max-height: 760px;
         border-radius: 20px;
     }
 }
