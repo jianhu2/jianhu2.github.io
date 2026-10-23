@@ -6,8 +6,22 @@
     <description>Recent content in Tools on 深海映星辰</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jianhu.cc/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于哪吒面板的笔记本远程唤醒与在线监控</title>
+      <link>https://jianhu.cc/posts/nezha-wol-remote-wake-design/</link>
+      <pubDate>Fri, 23 Oct 2026 12:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/nezha-wol-remote-wake-design/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;版本&lt;/strong&gt;：v1.0（2026-10-23）&#xA;&lt;strong&gt;适用对象&lt;/strong&gt;：运维/开发分享&#xA;&lt;strong&gt;关键词&lt;/strong&gt;：Wake-on-LAN、哪吒监控(Nezha v2.4.1)、触发任务、TCP 服务监控、OpenWrt 中转节点&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-概述&#34;&gt;1. 概述&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-目的&#34;&gt;1.1 目的&lt;/h3&gt;&#xA;&lt;p&gt;为内网一台 Windows 笔记本（物理下线/关机后）提供&lt;strong&gt;远程、受控、可审计&lt;/strong&gt;的开机能力，并在面板上提供&lt;strong&gt;可见的在线/离线状态&lt;/strong&gt;。整套能力复用现有哪吒监控面板，不引入独立服务端。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>gost 一键中转：把带认证的 SOCKS5 转成本地无认证 HTTP&#43;SOCKS5</title>
+      <link>https://jianhu.cc/posts/proxy-gost-deploy/</link>
+      <pubDate>Wed, 20 May 2026 15:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/proxy-gost-deploy/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;把带账密的上游 SOCKS5 在内网&amp;quot;脱密&amp;quot;，对外暴露一个&lt;strong&gt;同时支持 HTTP 和 SOCKS5&lt;/strong&gt; 的无认证端口。给 SmartProxy / SwitchyOmega 这类&lt;strong&gt;不支持 SOCKS5 认证&lt;/strong&gt;的浏览器扩展用最舒服，内网多设备共用同一出口也一并解决。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;为什么需要这层中转&#34;&gt;为什么需要这层中转&lt;/h2&gt;&#xA;&lt;p&gt;供应商给的 SOCKS5 通常长这样：&lt;code&gt;socks5://USER:PASS@HOST:PORT&lt;/code&gt;。直接丢进浏览器扩展会发现：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>内网穿透与远程访问方案总结</title>
       <link>https://jianhu.cc/posts/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E4%B8%8E%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/</link>

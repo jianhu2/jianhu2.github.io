@@ -6,8 +6,15 @@
     <description>Recent content in Gost on 深海映星辰</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 17 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jianhu.cc/tags/gost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gost 一键中转：把带认证的 SOCKS5 转成本地无认证 HTTP&#43;SOCKS5</title>
+      <link>https://jianhu.cc/posts/proxy-gost-deploy/</link>
+      <pubDate>Wed, 20 May 2026 15:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/proxy-gost-deploy/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;把带账密的上游 SOCKS5 在内网&amp;quot;脱密&amp;quot;，对外暴露一个&lt;strong&gt;同时支持 HTTP 和 SOCKS5&lt;/strong&gt; 的无认证端口。给 SmartProxy / SwitchyOmega 这类&lt;strong&gt;不支持 SOCKS5 认证&lt;/strong&gt;的浏览器扩展用最舒服，内网多设备共用同一出口也一并解决。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;为什么需要这层中转&#34;&gt;为什么需要这层中转&lt;/h2&gt;&#xA;&lt;p&gt;供应商给的 SOCKS5 通常长这样：&lt;code&gt;socks5://USER:PASS@HOST:PORT&lt;/code&gt;。直接丢进浏览器扩展会发现：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>家宽 LXC 穿透方案成本评估</title>
       <link>https://jianhu.cc/posts/home-lxc-tunnel-cost/</link>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nezha on 深海映星辰</title>
+    <link>https://jianhu.cc/tags/nezha/</link>
+    <description>Recent content in Nezha on 深海映星辰</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jianhu.cc/tags/nezha/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于哪吒面板的笔记本远程唤醒与在线监控</title>
+      <link>https://jianhu.cc/posts/nezha-wol-remote-wake-design/</link>
+      <pubDate>Fri, 23 Oct 2026 12:00:00 +0800</pubDate>
+      <guid>https://jianhu.cc/posts/nezha-wol-remote-wake-design/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;版本&lt;/strong&gt;：v1.0（2026-10-23）&#xA;&lt;strong&gt;适用对象&lt;/strong&gt;：运维/开发分享&#xA;&lt;strong&gt;关键词&lt;/strong&gt;：Wake-on-LAN、哪吒监控(Nezha v2.4.1)、触发任务、TCP 服务监控、OpenWrt 中转节点&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-概述&#34;&gt;1. 概述&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-目的&#34;&gt;1.1 目的&lt;/h3&gt;&#xA;&lt;p&gt;为内网一台 Windows 笔记本（物理下线/关机后）提供&lt;strong&gt;远程、受控、可审计&lt;/strong&gt;的开机能力，并在面板上提供&lt;strong&gt;可见的在线/离线状态&lt;/strong&gt;。整套能力复用现有哪吒监控面板，不引入独立服务端。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
